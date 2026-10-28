@@ -15,6 +15,7 @@
             --text-muted: #94a3b8;
             --border: #334155;
             --focus-ring: #38bdf8;
+            --highlight-yellow: #facc15;
         }
 
         body {
@@ -47,7 +48,7 @@
         .screen {
             flex: 1;
             overflow-y: auto;
-            padding: 6px 10px;
+            padding: 4px 8px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -66,27 +67,27 @@
             background: linear-gradient(135deg, rgba(15, 118, 110, 0.25) 0%, rgba(56, 189, 248, 0.15) 100%);
             border: 1px solid #38bdf8;
             border-radius: 4px;
-            padding: 4px;
-            margin-bottom: 4px;
+            padding: 2px;
+            margin-bottom: 2px;
         }
         .app-brand-header h1 {
             margin: 0;
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             font-weight: 900;
             color: #38bdf8;
             letter-spacing: 0.5px;
             text-transform: uppercase;
         }
         .app-brand-header p {
-            margin: 1px 0 0 0;
-            font-size: 0.5rem;
+            margin: 0;
+            font-size: 0.45rem;
             color: var(--text-muted);
             letter-spacing: 1px;
             text-transform: uppercase;
         }
 
         .header-title {
-            font-size: 0.85rem;
+            font-size: 0.78rem;
             font-weight: bold;
             color: var(--text-main);
             margin-bottom: 1px;
@@ -94,21 +95,21 @@
         }
 
         .subtitle {
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             color: var(--text-muted);
             text-align: center;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .status-banner {
             background-color: rgba(56, 189, 248, 0.1);
             border: 1px solid #38bdf8;
             border-radius: 4px;
-            padding: 3px 6px;
-            margin-bottom: 4px;
+            padding: 2px 4px;
+            margin-bottom: 2px;
             text-align: center;
-            font-size: 0.58rem;
-            color: #38bdf8;
+            font-size: 0.55rem;
+            color: var(--highlight-yellow);
             font-weight: bold;
         }
 
@@ -116,12 +117,12 @@
             background-color: rgba(15, 118, 110, 0.15);
             border: 1px solid #0f766e;
             border-radius: 4px;
-            padding: 4px 6px;
-            margin-bottom: 4px;
+            padding: 2px 4px;
+            margin-bottom: 2px;
             text-align: center;
         }
         .tse-notice-box span {
-            font-size: 0.58rem;
+            font-size: 0.52rem;
             color: #38bdf8;
             font-weight: bold;
             display: block;
@@ -129,30 +130,30 @@
         }
         .tse-notice-box p {
             margin: 0;
-            font-size: 0.5rem;
+            font-size: 0.45rem;
             color: var(--text-muted);
             line-height: 1.1;
         }
 
         .form-group {
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
 
         label {
             display: block;
-            font-size: 0.58rem;
+            font-size: 0.52rem;
             color: var(--text-muted);
             margin-bottom: 1px;
         }
 
         input, select {
             width: 100%;
-            padding: 5px 6px;
+            padding: 3px 5px;
             background-color: #090d16;
             border: 1px solid var(--border);
             border-radius: 4px;
             color: var(--text-main);
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             box-sizing: border-box;
         }
 
@@ -165,16 +166,16 @@
         .checkbox-group {
             display: flex;
             align-items: flex-start;
-            gap: 4px;
-            margin: 4px 0;
-            font-size: 0.58rem;
+            gap: 3px;
+            margin: 2px 0;
+            font-size: 0.52rem;
             color: var(--text-main);
             line-height: 1.1;
         }
 
         .checkbox-group input {
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             margin-top: 1px;
             accent-color: var(--accent);
             cursor: pointer;
@@ -182,23 +183,23 @@
 
         button {
             width: 100%;
-            padding: 6px;
+            padding: 4px;
             background-color: #1e293b;
             color: white;
             border: 1px solid #475569;
             border-radius: 4px;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: bold;
             cursor: pointer;
-            margin-top: 3px;
+            margin-top: 2px;
         }
 
         .candidate-card {
             background-color: #090d16;
             border: 2px solid var(--border);
             border-radius: 4px;
-            padding: 4px 6px;
-            margin-bottom: 3px;
+            padding: 3px 5px;
+            margin-bottom: 2px;
             display: flex;
             align-items: center;
             cursor: pointer;
@@ -211,22 +212,22 @@
         }
 
         .candidate-img {
-            width: 26px;
-            height: 26px;
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 6px;
+            margin-right: 5px;
             border: 1px solid var(--border);
         }
 
         .candidate-info h4 {
             margin: 0 0 1px 0;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
         }
 
         .candidate-info p {
             margin: 0;
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             color: var(--text-muted);
         }
 
@@ -234,12 +235,12 @@
             background-color: #1e293b;
             border: 1px dashed var(--border);
             text-align: center;
-            padding: 4px;
+            padding: 3px;
             border-radius: 4px;
-            margin-top: 3px;
+            margin-top: 2px;
             cursor: pointer;
             font-weight: bold;
-            font-size: 0.62rem;
+            font-size: 0.58rem;
             color: var(--text-muted);
         }
         .special-vote-btn.selected {
@@ -254,22 +255,22 @@
 
         .success-box {
             text-align: center;
-            padding: 8px 6px;
+            padding: 6px 4px;
         }
 
         .success-icon {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: #10b981;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         .badge {
             display: inline-block;
             background-color: rgba(100, 116, 139, 0.2);
             color: #94a3b8;
-            padding: 1px 5px;
+            padding: 1px 4px;
             border-radius: 10px;
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             font-weight: bold;
             margin-bottom: 2px;
             text-transform: uppercase;
@@ -277,26 +278,30 @@
 
         .result-tabs {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: row;
             gap: 2px;
             margin-bottom: 3px;
             background-color: #090d16;
             padding: 2px;
             border-radius: 4px;
             border: 1px solid var(--border);
+            overflow-x: auto;
         }
         .tab-btn {
             flex: 1;
-            min-width: 22%;
-            padding: 3px;
+            min-width: 0;
+            padding: 3px 2px;
             background: transparent;
             border: none;
             color: var(--text-muted);
-            font-size: 0.55rem;
+            font-size: 0.52rem;
             font-weight: bold;
             border-radius: 3px;
             cursor: pointer;
             text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .tab-btn.active {
             background-color: var(--primary);
@@ -305,11 +310,11 @@
 
         .filter-box {
             background-color: #090d16;
-            padding: 4px 6px;
+            padding: 3px 5px;
             border-radius: 4px;
             border: 1px solid var(--border);
-            margin-bottom: 3px;
-            font-size: 0.6rem;
+            margin-bottom: 2px;
+            font-size: 0.55rem;
         }
 
         .sub-filters {
@@ -319,11 +324,11 @@
             margin-top: 2px;
         }
         .sub-filter-btn {
-            padding: 2px 4px;
+            padding: 2px 3px;
             background: #1e293b;
             border: 1px solid var(--border);
             color: var(--text-muted);
-            font-size: 0.58rem;
+            font-size: 0.52rem;
             border-radius: 3px;
             cursor: pointer;
         }
@@ -334,10 +339,10 @@
         }
 
         .section-divider {
-            margin: 3px 0;
+            margin: 2px 0;
             border-top: 1px dashed var(--border);
             padding-top: 2px;
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             font-weight: bold;
             color: #38bdf8;
             text-transform: uppercase;
@@ -349,16 +354,16 @@
             background-color: #090d16;
             border: 1px solid var(--border);
             border-radius: 4px;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
             padding: 2px;
         }
         .mode-btn {
             flex: 1;
-            padding: 3px;
+            padding: 2px;
             background: transparent;
             border: none;
             color: var(--text-muted);
-            font-size: 0.58rem;
+            font-size: 0.52rem;
             font-weight: bold;
             cursor: pointer;
             border-radius: 3px;
@@ -369,13 +374,13 @@
         }
 
         .result-bar-container {
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         .result-meta {
             display: flex;
             justify-content: space-between;
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             margin-bottom: 1px;
         }
 
@@ -398,18 +403,18 @@
             background-color: #090d16;
             border: 1px solid var(--border);
             border-radius: 4px;
-            padding: 3px;
-            margin-bottom: 3px;
+            padding: 2px;
+            margin-bottom: 2px;
             text-align: center;
         }
         .admin-stat-card h3 {
             margin: 0;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             color: #38bdf8;
         }
         .admin-stat-card p {
-            margin: 1px 0 0 0;
-            font-size: 0.55rem;
+            margin: 0;
+            font-size: 0.5rem;
             color: var(--text-muted);
         }
 
@@ -417,10 +422,10 @@
             background-color: #ffffff;
             color: #0f172a;
             border-radius: 4px;
-            padding: 6px;
-            font-size: 0.6rem;
-            margin-bottom: 3px;
-            max-height: 160px;
+            padding: 5px;
+            font-size: 0.55rem;
+            margin-bottom: 2px;
+            max-height: 140px;
             overflow-y: auto;
             text-align: left;
         }
@@ -428,7 +433,7 @@
             color: #0f766e;
             text-align: center;
             margin-bottom: 2px;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
         }
         .report-preview-box hr {
             border: 0;
@@ -436,17 +441,16 @@
             margin: 2px 0;
         }
 
-        /* Banner de propaganda fixo e sempre visível no rodapé do ecrã do telemóvel */
         .sponsor-banner {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             border-top: 1px dashed #475569;
-            padding: 4px 6px;
+            padding: 3px 5px;
             text-align: center;
             flex-shrink: 0;
             width: 100%;
         }
         .sponsor-banner span {
-            font-size: 0.42rem;
+            font-size: 0.4rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: var(--text-muted);
@@ -455,7 +459,7 @@
         }
         .sponsor-banner p {
             margin: 0;
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             color: #38bdf8;
             font-weight: bold;
         }
@@ -467,18 +471,15 @@
         <div class="screen" id="app-screen">
             
             <div class="screen-content">
-                <!-- NOME DO PRODUTO EM DESTAQUE ABSOLUTO NO TOPO -->
                 <div class="app-brand-header">
                     <h1>Pesquisa Justa</h1>
                     <p>Sistema de Opinião Pública & Eleitoral</p>
                 </div>
 
-                <!-- BANNER DE STATUS AUTOMÁTICO DO TURNO ATIVO -->
                 <div class="status-banner" id="status-banner-text">
                     🗳️ Pesquisa Eleitoral Oficial (1º Turno)
                 </div>
 
-                <!-- CAIXA DE CONFORMIDADE TSE -->
                 <div class="tse-notice-box">
                     <span>📜 CONFORMIDADE ELEITORAL & REGISTRO TSE</span>
                     <p>Protocolo PesqEle: BR-02849/2026 | Resolução TSE nº 23.600/2019</p>
@@ -496,14 +497,39 @@
                         <input type="text" id="whatsapp-input" placeholder="(11) 99999-9999">
                     </div>
 
-                    <!-- ESTADO E MUNICÍPIO / OUTROS PAÍSES -->
-                    <div style="display: flex; gap: 6px;">
+                    <div style="display: flex; gap: 4px;">
                         <div class="form-group" style="flex: 1;">
                             <label>Estado / Países</label>
-                            <select id="state-input">
+                            <select id="state-input" onchange="updateCitySuggestions()">
                                 <option value="">Selecione UF</option>
-                                <option value="AC">AC</option><option value="AL">AL</option><option value="AP">AP</option><option value="AM">AM</option><option value="BA">BA</option><option value="CE">CE</option><option value="DF">DF</option><option value="ES">ES</option><option value="GO">GO</option><option value="MA">MA</option><option value="MT">MT</option><option value="MS">MS</option><option value="MG">MG</option><option value="PA">PA</option><option value="PB">PB</option><option value="PR">PR</option><option value="PE">PE</option><option value="PI">PI</option><option value="RJ">RJ</option><option value="RN">RN</option><option value="RS">RS</option><option value="RO">RO</option><option value="RR">RR</option><option value="SC">SC</option><option value="SP">SP</option><option value="SE">SE</option><option value="TO">TO</option>
-                                <option value="ZZ">🌎 Outros Países</option>
+                                <option value="AC">Acre - AC</option>
+                                <option value="AL">Alagoas - AL</option>
+                                <option value="AP">Amapá - AP</option>
+                                <option value="AM">Amazonas - AM</option>
+                                <option value="BA">Bahia - BA</option>
+                                <option value="CE">Ceará - CE</option>
+                                <option value="DF">Distrito Federal - DF</option>
+                                <option value="ES">Espírito Santo - ES</option>
+                                <option value="GO">Goiás - GO</option>
+                                <option value="MA">Maranhão - MA</option>
+                                <option value="MT">Mato Grosso - MT</option>
+                                <option value="MS">Mato Grosso do Sul - MS</option>
+                                <option value="MG">Minas Gerais - MG</option>
+                                <option value="PA">Pará - PA</option>
+                                <option value="PB">Paraíba - PB</option>
+                                <option value="PR">Paraná - PR</option>
+                                <option value="PE">Pernambuco - PE</option>
+                                <option value="PI">Piauí - PI</option>
+                                <option value="RJ">Rio de Janeiro - RJ</option>
+                                <option value="RN">Rio Grande do Norte - RN</option>
+                                <option value="RS">Rio Grande do Sul - RS</option>
+                                <option value="RO">Rondônia - RO</option>
+                                <option value="RR">Roraima - RR</option>
+                                <option value="SC">Santa Catarina - SC</option>
+                                <option value="SP">São Paulo - SP</option>
+                                <option value="SE">Sergipe - SE</option>
+                                <option value="TO">Tocantins - TO</option>
+                                <option value="ZZ">🌎 Outros Países (Exterior)</option>
                             </select>
                         </div>
                         <div class="form-group" style="flex: 1.5;">
@@ -514,8 +540,7 @@
                         </div>
                     </div>
 
-                    <!-- ZONA E RENDA -->
-                    <div style="display: flex; gap: 6px;">
+                    <div style="display: flex; gap: 4px;">
                         <div class="form-group" style="flex: 1;">
                             <label>Zona / Região</label>
                             <select id="zone-input">
@@ -545,8 +570,7 @@
                         </div>
                     </div>
 
-                    <!-- GÊNERO E RAÇA -->
-                    <div style="display: flex; gap: 6px;">
+                    <div style="display: flex; gap: 4px;">
                         <div class="form-group" style="flex: 1;">
                             <label>Gênero</label>
                             <select id="gender-input">
@@ -572,23 +596,23 @@
 
                     <div class="checkbox-group">
                         <input type="checkbox" id="lgpd-check">
-                        <label for="lgpd-check" style="color: var(--text-main); font-size: 0.58rem; cursor: pointer;">Autorizo o uso destes dados para fins estatísticos e anonimização conforme LGPD e TSE.</label>
+                        <label for="lgpd-check" style="color: var(--text-main); font-size: 0.52rem; cursor: pointer;">Autorizo o uso destes dados para fins estatísticos e anonimização conforme LGPD e TSE.</label>
                     </div>
 
                     <button onclick="goToOTP()">Prosseguir para Verificação</button>
                     
-                    <button onclick="openAdminLogin()" style="background-color: #090d16; border: 1px dashed var(--border); color: var(--text-muted); font-size: 0.58rem; margin-top: 3px;">🔒 Acesso Restrito (Gestor / ADM)</button>
+                    <button onclick="openAdminLogin()" style="background-color: #090d16; border: 1px dashed var(--border); color: var(--text-muted); font-size: 0.52rem; margin-top: 2px;">🔒 Acesso Restrito (Gestor / ADM)</button>
                 </div>
 
                 <!-- TELA 1.1: LOGIN DO ADMINISTRADOR -->
                 <div id="screen-admin-login" class="view hidden">
-                    <div style="text-align: center; margin-top: 10px;">
+                    <div style="text-align: center; margin-top: 6px;">
                         <span class="badge" style="background-color: rgba(56, 189, 248, 0.2); color: #38bdf8;">Painel de Controle</span>
                         <h1 class="header-title">Autenticação do Gestor</h1>
                         <p class="subtitle">Insira a chave mestra do sistema para acessar a retaguarda analítica.</p>
                     </div>
 
-                    <div class="form-group" style="margin-top: 6px;">
+                    <div class="form-group" style="margin-top: 4px;">
                         <label>Configurar Turno Ativo do Sistema</label>
                         <select id="admin-turn-toggle" onchange="toggleSystemTurn()">
                             <option value="1">1º Turno (Fase Inicial)</option>
@@ -596,22 +620,22 @@
                         </select>
                     </div>
 
-                    <div class="form-group" style="margin-top: 6px;">
+                    <div class="form-group" style="margin-top: 4px;">
                         <label>Chave de Acesso ADM</label>
                         <input type="password" id="admin-pass-input" placeholder="Digite a senha (ex: adm2026)">
                     </div>
                     <button onclick="validateAdminLogin()" style="background-color: var(--accent); border-color: #14b8a6;">Entrar no Painel Macro</button>
-                    <button onclick="backToRegister()" style="background-color: #334155; margin-top: 3px;">Voltar ao Início</button>
+                    <button onclick="backToRegister()" style="background-color: #334155; margin-top: 2px;">Voltar ao Início</button>
                 </div>
 
                 <!-- TELA 2: VALIDAÇÃO OTP -->
                 <div id="screen-otp" class="view hidden">
-                    <div style="text-align: center; margin-top: 10px;">
+                    <div style="text-align: center; margin-top: 6px;">
                         <span class="badge">Segurança</span>
                         <h1 class="header-title">Código OTP</h1>
                         <p class="subtitle">Digite o código de 6 dígitos enviado para o seu WhatsApp.</p>
                     </div>
-                    <div class="form-group" style="margin-top: 6px;">
+                    <div class="form-group" style="margin-top: 4px;">
                         <label>Código de Confirmação</label>
                         <input type="text" id="otp-input" placeholder="123456" maxlength="6">
                     </div>
@@ -622,7 +646,7 @@
                 <div id="screen-voting" class="view hidden">
                     <div style="text-align: center; margin-bottom: 2px;">
                         <span class="badge" id="voting-badge">Etapa 1 de X</span>
-                        <h2 id="voting-title" style="font-size: 0.8rem; margin-bottom: 1px;">Cargo</h2>
+                        <h2 id="voting-title" style="font-size: 0.75rem; margin-bottom: 1px;">Cargo</h2>
                         <p class="subtitle" id="voting-subtitle">Selecione 1 opção</p>
                     </div>
 
@@ -634,28 +658,23 @@
                         <div class="special-vote-btn" onclick="handleSpecialVote('Indecisos / Não Sabe')">Indeciso / Não Sabe</div>
                     </div>
 
-                    <button id="btn-next-vote" onclick="nextVotingStep()" style="background-color: #0f766e; border-color: #14b8a6; margin-top: 3px;" disabled>Confirmar e Avançar</button>
+                    <button id="btn-next-vote" onclick="nextVotingStep()" style="background-color: #0f766e; border-color: #14b8a6; margin-top: 2px;" disabled>Confirmar e Avançar</button>
                 </div>
 
                 <!-- TELA 4: SUCESSO E BLOQUEIO -->
                 <div id="screen-success" class="view hidden success-box">
                     <div class="success-icon">🛡️</div>
-                    <h2 style="color: #10b981; font-size: 0.85rem;">Voto Computado e Anonimizado</h2>
+                    <h2 style="color: #10b981; font-size: 0.78rem;">Voto Computado e Anonimizado</h2>
                     <p class="subtitle">Seu voto foi segregado em urna cega. O histórico foi apagado deste dispositivo.</p>
-                    <div style="background-color: #090d16; padding: 4px; border-radius: 4px; margin: 3px 0; border: 1px solid var(--border);">
-                        <p style="font-size: 0.58rem; margin: 0; color: var(--text-muted);">Status: <strong style="color: var(--text-main);">Acesso encerrado para esta consulta.</strong></p>
+                    <div style="background-color: #090d16; padding: 3px; border-radius: 4px; margin: 2px 0; border: 1px solid var(--border);">
+                        <p style="font-size: 0.52rem; margin: 0; color: var(--text-muted);">Status: <strong style="color: var(--text-main);">Acesso encerrado para esta consulta.</strong></p>
                     </div>
                     <button onclick="goToResults()">Consultar Resultados e Ficha TSE</button>
                 </div>
 
                 <!-- TELA 5: RESULTADOS / PAINEL ANALÍTICO ADM -->
                 <div id="screen-results" class="view hidden">
-                    <div style="text-align: center; margin-bottom: 2px;">
-                        <span class="badge" id="results-badge-title">Painel Analítico de Amostra</span>
-                        <h2 style="font-size: 0.8rem; margin-bottom: 1px;">Resultados por Estados e Municípios</h2>
-                    </div>
-
-                    <div style="display: flex; gap: 4px; margin-bottom: 3px;">
+                    <div style="display: flex; gap: 4px; margin-bottom: 2px;">
                         <div class="admin-stat-card" style="flex: 1; margin-bottom: 0;">
                             <h3 id="stat-total-votes">4.500</h3>
                             <p>Amostra Consolidada</p>
@@ -671,48 +690,48 @@
                     <!-- FILTROS GEOGRÁFICOS DINÂMICOS -->
                     <div class="filter-box">
                         <div style="display: flex; gap: 4px; margin-bottom: 2px;">
-                            <label style="flex: 1; font-size: 0.58rem; color: var(--text-muted); font-weight: bold;">Estado / Países:</label>
-                            <label id="filter-second-label" style="flex: 1; font-size: 0.58rem; color: var(--text-muted); font-weight: bold;">Município / Países:</label>
+                            <label style="flex: 1; font-size: 0.52rem; color: var(--text-muted); font-weight: bold;">Estado / Países:</label>
+                            <label id="filter-second-label" style="flex: 1; font-size: 0.52rem; color: var(--text-muted); font-weight: bold;">Município / Países:</label>
                         </div>
 
                         <div style="display: flex; gap: 4px; margin-bottom: 2px;" id="geographic-selectors-wrapper">
-                            <select id="filter-state-select" style="flex: 1; font-size: 0.58rem; padding: 3px;">
-                                <option value="AM">Amazonas (AM)</option>
-                                <option value="AC">Acre (AC)</option>
-                                <option value="AL">Alagoas (AL)</option>
-                                <option value="AP">Amapá (AP)</option>
-                                <option value="BA">Bahia (BA)</option>
-                                <option value="CE">Ceará (CE)</option>
-                                <option value="DF">Distrito Federal (DF)</option>
-                                <option value="ES">Espírito Santo (ES)</option>
-                                <option value="GO">Goiás (GO)</option>
-                                <option value="MA">Maranhão (MA)</option>
-                                <option value="MT">Mato Grosso (MT)</option>
-                                <option value="MS">Mato Grosso do Sul (MS)</option>
-                                <option value="MG">Minas Gerais (MG)</option>
-                                <option value="PA">Pará (PA)</option>
-                                <option value="PB">Paraíba (PB)</option>
-                                <option value="PR">Paraná (PR)</option>
-                                <option value="PE">Pernambuco (PE)</option>
-                                <option value="PI">Piauí (PI)</option>
-                                <option value="RJ">Rio de Janeiro (RJ)</option>
-                                <option value="RN">Rio Grande do Norte (RN)</option>
-                                <option value="RS">Rio Grande do Sul (RS)</option>
-                                <option value="RO">Rondônia (RO)</option>
-                                <option value="RR">Roraima (RR)</option>
-                                <option value="SC">Santa Catarina (SC)</option>
-                                <option value="SP">São Paulo (SP)</option>
-                                <option value="SE">Sergipe (SE)</option>
-                                <option value="TO">Tocantins (TO)</option>
-                                <option value="ZZ">🌎 Outros Países</option>
+                            <select id="filter-state-select" onchange="onStateFilterChange()" style="flex: 1; font-size: 0.52rem; padding: 2px;">
+                                <option value="AM">Amazonas - AM</option>
+                                <option value="AC">Acre - AC</option>
+                                <option value="AL">Alagoas - AL</option>
+                                <option value="AP">Amapá - AP</option>
+                                <option value="BA">Bahia - BA</option>
+                                <option value="CE">Ceará - CE</option>
+                                <option value="DF">Distrito Federal - DF</option>
+                                <option value="ES">Espírito Santo - ES</option>
+                                <option value="GO">Goiás - GO</option>
+                                <option value="MA">Maranhão - MA</option>
+                                <option value="MT">Mato Grosso - MT</option>
+                                <option value="MS">Mato Grosso do Sul - MS</option>
+                                <option value="MG">Minas Gerais - MG</option>
+                                <option value="PA">Pará - PA</option>
+                                <option value="PB">Paraíba - PB</option>
+                                <option value="PR">Paraná - PR</option>
+                                <option value="PE">Pernambuco - PE</option>
+                                <option value="PI">Piauí - PI</option>
+                                <option value="RJ">Rio de Janeiro - RJ</option>
+                                <option value="RN">Rio Grande do Norte - RN</option>
+                                <option value="RS">Rio Grande do Sul - RS</option>
+                                <option value="RO">Rondônia - RO</option>
+                                <option value="RR">Roraima - RR</option>
+                                <option value="SC">Santa Catarina - SC</option>
+                                <option value="SP">São Paulo - SP</option>
+                                <option value="SE">Sergipe - SE</option>
+                                <option value="TO">Tocantins - TO</option>
+                                <option value="ZZ">🌎 Outros Países (Exterior)</option>
                             </select>
                             
-                            <select id="filter-city-select" style="flex: 1; font-size: 0.58rem; padding: 3px;">
+                            <select id="filter-city-select" onchange="onCityFilterChange()" style="flex: 1; font-size: 0.52rem; padding: 2px;">
                                 <option value="Todas as Cidades">🏙️ Todas as Cidades</option>
                             </select>
                         </div>
 
-                        <label id="macro-label" style="margin-bottom: 1px; color: var(--text-main); font-weight: bold; font-size: 0.58rem;">Recorte Geográfico:</label>
+                        <label id="macro-label" style="margin-bottom: 1px; color: var(--text-main); font-weight: bold; font-size: 0.52rem;">Recorte Geográfico:</label>
                         <div id="macro-filters-container" class="sub-filters" style="margin-bottom: 2px;"></div>
                         <div id="section-divider-elem" class="section-divider">📍 Zonas da Cidade Selecionada</div>
                         <div id="micro-filters-container" class="sub-filters"></div>
@@ -725,34 +744,33 @@
 
                     <div id="results-content-container"></div>
 
-                    <button onclick="openExportReport()" style="background-color: #0f766e; border-color: #14b8a6; margin-top: 2px; font-size: 0.62rem;">📄 Gerar Relatório Oficial (Imprensa / PDF)</button>
+                    <button onclick="openExportReport()" style="background-color: #0f766e; border-color: #14b8a6; margin-top: 2px; font-size: 0.58rem;">📄 Gerar Relatório Oficial (Imprensa / PDF)</button>
 
-                    <div style="background-color: #090d16; padding: 4px; border-radius: 4px; margin-top: 2px; border: 1px solid var(--border); font-size: 0.58rem; color: var(--text-muted); line-height: 1.15;">
+                    <div style="background-color: #090d16; padding: 3px; border-radius: 4px; margin-top: 2px; border: 1px solid var(--border); font-size: 0.52rem; color: var(--text-muted); line-height: 1.1;">
                         <strong style="color: var(--text-main); display: block; margin-bottom: 1px;">Compliance (TSE):</strong>
                         • Protocolo PesqEle: BR-02849/2026 | Amostra: 4.500 Ponderados<br>
                         • Margem de Erro: ± 1.5% (Confiança 95%) | CONRE-3
                     </div>
 
-                    <button onclick="resetApp()" style="margin-top: 2px; padding: 4px; background-color: #334155; font-size: 0.58rem;">Sair / Reiniciar Teste</button>
+                    <button onclick="resetApp()" style="margin-top: 2px; padding: 3px; background-color: #334155; font-size: 0.52rem;">Sair / Reiniciar Teste</button>
                 </div>
 
                 <!-- TELA 6: EXPORTAÇÃO DE RELATÓRIO -->
                 <div id="screen-export" class="view hidden">
                     <div style="text-align: center; margin-bottom: 2px;">
                         <span class="badge" style="background-color: rgba(16, 185, 129, 0.2); color: #10b981;">Documento Executivo</span>
-                        <h2 style="font-size: 0.8rem; margin-bottom: 1px;">Relatório Oficial para Imprensa</h2>
+                        <h2 style="font-size: 0.75rem; margin-bottom: 1px;">Relatório Oficial para Imprensa</h2>
                         <p class="subtitle">Pronto para distribuição institucional, jurídica e partidária.</p>
                     </div>
 
                     <div class="report-preview-box" id="report-content-box"></div>
 
-                    <button onclick="copyReportText()" style="background-color: #2563eb; border-color: #3b82f6; font-size: 0.62rem;">📋 Copiar Relatório Completo</button>
-                    <button onclick="downloadReportMock()" style="background-color: #0f766e; border-color: #14b8a6; font-size: 0.62rem; margin-top: 2px;">💾 Descarregar / Salvar (PDF)</button>
-                    <button onclick="backToResults()" style="background-color: #334155; margin-top: 2px; font-size: 0.62rem;">Voltar ao Painel Analítico</button>
+                    <button onclick="copyReportText()" style="background-color: #2563eb; border-color: #3b82f6; font-size: 0.58rem;">📋 Copiar Relatório Completo</button>
+                    <button onclick="downloadReportMock()" style="background-color: #0f766e; border-color: #14b8a6; font-size: 0.58rem; margin-top: 2px;">💾 Descarregar / Salvar (PDF)</button>
+                    <button onclick="backToResults()" style="background-color: #334155; margin-top: 2px; font-size: 0.58rem;">Voltar ao Painel Analítico</button>
                 </div>
             </div>
 
-            <!-- Banner fixo e perfeitamente visível no fundo do telemóvel -->
             <div class="sponsor-banner">
                 <span>Patrocínio Institucional / Comercial</span>
                 <p>🏢 Anúncio Comercial Genérico ou Apoio Tecnológico 2026</p>
@@ -775,33 +793,33 @@
         const electionSchedules = {
             2026: {
                 1: [
-                    { id: 'president', title: "Presidente da República (1º Turno)", subtitle: "Selecione 1 candidato ou voto especial", type: "single", candidates: [
+                    { id: 'president', title: "Presidente", subtitle: "Selecione 1 candidato ou voto especial", type: "single", candidates: [
                         { name: "Candidato Federal Alpha", party: "PTX / Nº 12", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150" },
                         { name: "Candidato Federal Beta", party: "PLZ / Nº 22", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150" }
                     ]},
-                    { id: 'governor', title: "Governador do Estado (1º Turno)", subtitle: "Selecione 1 candidato ou voto especial", type: "single", candidates: [
+                    { id: 'governor', title: "Governador", subtitle: "Selecione 1 candidato ou voto especial", type: "single", candidates: [
                         { name: "Candidato Estadual Delta", party: "PSB / Nº 40", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150" },
                         { name: "Candidato Estadual Ômega", party: "PSD / Nº 55", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150" }
                     ]},
-                    { id: 'senator', title: "Senador da República", subtitle: "Selecione ATÉ 2 candidatos", type: "multiple", candidates: [
+                    { id: 'senator', title: "Senador(es)", subtitle: "Selecione ATÉ 2 candidatos", type: "multiple", candidates: [
                         { name: "Senador Candidato Um", party: "MDB / Nº 151", img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150" },
                         { name: "Senador Candidato Dois", party: "UNIÃO / Nº 444", img: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150" }
                     ]},
-                    { id: 'mayor', title: "Prefeito Municipal (1º Turno)", subtitle: "Selecione 1 candidato ou voto especial", type: "single", candidates: [
+                    { id: 'mayor', title: "Prefeito", subtitle: "Selecione 1 candidato ou voto especial", type: "single", candidates: [
                         { name: "Prefeito Municipal X", party: "UNIÃO / Nº 44", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150" },
                         { name: "Prefeito Municipal Y", party: "PSD / Nº 55", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150" }
                     ]}
                 ],
                 2: [
-                    { id: 'president_2t', title: "Presidente (🚨 2º TURNO)", subtitle: "Finalistas - Selecione 1 candidato", type: "single", candidates: [
+                    { id: 'president_2t', title: "Presidente", subtitle: "Finalistas - Selecione 1 candidato", type: "single", candidates: [
                         { name: "Candidato Federal Alpha", party: "PTX / Nº 12", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150" },
                         { name: "Candidato Federal Beta", party: "PLZ / Nº 22", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150" }
                     ]},
-                    { id: 'governor_2t', title: "Governador (🚨 2º TURNO)", subtitle: "Finalistas - Selecione 1 candidato", type: "single", candidates: [
+                    { id: 'governor_2t', title: "Governador", subtitle: "Finalistas - Selecione 1 candidato", type: "single", candidates: [
                         { name: "Candidato Estadual Delta", party: "PSB / Nº 40", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150" },
                         { name: "Candidato Estadual Ômega", party: "PSD / Nº 55", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150" }
                     ]},
-                    { id: 'mayor_2t', title: "Prefeito (🚨 2º TURNO)", subtitle: "Finalistas Municipal", type: "single", candidates: [
+                    { id: 'mayor_2t', title: "Prefeito", subtitle: "Finalistas Municipal", type: "single", candidates: [
                         { name: "Prefeito Municipal X", party: "UNIÃO / Nº 44", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150" },
                         { name: "Prefeito Municipal Y", party: "PSD / Nº 55", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150" }
                     ]}
@@ -816,67 +834,55 @@
 
         updateSystemState();
 
-        const statesCityMap = {
-            "AC": ["Rio Branco (Capital)", "Cruzeiro do Sul", "Sena Madureira", "Tarauacá", "Feijó", "Brasiléia", "Plácido de Castro"],
-            "AL": ["Maceió (Capital)", "Arapiraca", "Palmeira dos Índios", "Rio Largo", "Penedo", "União dos Palmares", "São Miguel dos Campos"],
-            "AP": ["Macapá (Capital)", "Santana", "Laranjal do Jari", "Oiapoque", "Mazagão", "Porto Grande", "Tartarugalzinho"],
-            "AM": [
-                "Manaus (Capital)", "Parintins", "Itacoatiara", "Manacapuru", "Coari", "Tabatinga", "Maués", 
-                "Tefé", "Iranduba", "Manicoré", "Borba", "Humaitá", "São Gabriel da Cachoeira", "Presidente Figueiredo", 
-                "Itapiranga", "Careiro", "Careiro da Várzea", "Nova Olinda do Norte", "Autazes", "Barreirinha", 
-                "Nhamundá", "Boa Vista do Ramos", "Urucará", "Urucurituba", "Silves", "Ipixuna", "Juruá", "Eirunepé", 
-                "Carauari", "Guajará", "Envira", "Atalaia do Norte", "Benjamin Constant", "Amaturá", "São Paulo de Olivença", 
-                "Tonantins", "Jutaí", "Fonte Boa", "Japurá", "Maraã", "Alvarães", "Uarini", "Nogueira", "Codajás", 
-                "Anamã", "Caapiranga", "Anori", "Barcelos", "Santa Isabel do Rio Negro", "Novo Airão"
-            ],
-            "BA": ["Salvador (Capital)", "Feira de Santana", "Vitória da Conquista", "Camaçari", "Itabuna", "Lauro de Freitas", "Ilhéus", "Juazeiro", "Porto Seguro"],
-            "CE": ["Fortaleza (Capital)", "Caucaia", "Juazeiro do Norte", "Maracanaú", "Sobral", "Crato", "Itapipoca", "Maranguape", "Barbalha"],
-            "DF": ["Brasília (Capital / Plano Piloto)", "Taguatinga", "Ceilândia", "Samambaia", "Gama", "Planaltina", "Sobradinho"],
-            "ES": ["Vitória (Capital)", "Vila Velha", "Serra", "Cariacica", "Linhares", "São Mateus", "Guarapari", "Colatina", "Aracruz"],
-            "GO": ["Goiânia (Capital)", "Aparecida de Goiânia", "Anápolis", "Rio Verde", "Luziânia", "Águas Lindas de Goiás", "Valparaíso de Goiás", "Trindade", "Formosa"],
-            "MA": ["São Luís (Capital)", "Imperatriz", "São José de Ribamar", "Timon", "Caxias", "Codó", "Paço do Lumiar", "Açailândia", "Bacabal"],
-            "MT": ["Cuiabá (Capital)", "Várzea Grande", "Rondonópolis", "Sinop", "Tangará da Serra", "Cáceres", "Sorriso", "Lucas do Rio Verde", "Barra do Garças"],
-            "MS": ["Campo Grande (Capital)", "Dourados", "Três Lagoas", "Corumbá", "Ponta Porã", "Naviraí", "Sidrolândia", "Nova Andradina", "Aquidauana"],
-            "MG": ["Belo Horizonte (Capital)", "Uberlândia", "Contagem", "Juiz de Fora", "Betim", "Montes Claros", "Uberaba", "Governador Valadares", "Ipatinga", "Sete Lagoas"],
-            "PA": ["Belém (Capital)", "Ananindeua", "Santarém", "Marabá", "Castanhal", "Parauapebas", "Itaituba", "Altamira", "Bragança", "Tucuruí"],
-            "PB": ["João Pessoa (Capital)", "Campina Grande", "Santa Rita", "Patos", "Bayeux", "Sousa", "Cajazeiras", "Cabedelo", "Guarabira"],
-            "PR": ["Curitiba (Capital)", "Londrina", "Maringá", "Ponta Grossa", "Cascavel", "São José dos Pinhais", "Foz do Iguaçu", "Colombo", "Guarapuava", "Paranaguá"],
-            "PE": ["Recife (Capital)", "Jaboatão dos Guararapes", "Olinda", "Caruaru", "Petrolina", "Paulista", "Cabo de Santo Agostinho", "Camaragibe", "Garanhuns", "Vitória de Santo Antão"],
-            "PI": ["Teresina (Capital)", "Parnaíba", "Picos", "Piripiri", "Floriano", "Barras", "Campo Maior", "União", "Altos"],
-            "RJ": ["Rio de Janeiro (Capital)", "São Gonçalo", "Duque de Caxias", "Nova Iguaçu", "Niterói", "Belford Roxo", "Campos dos Goytacazes", "Petrópolis", "Volta Redonda", "Macaé"],
-            "RN": ["Natal (Capital)", "Mossoró", "Parnamirim", "São Gonçalo do Amarante", "Macaíba", "Ceará-Mirim", "Caicó", "Açu", "Currais Novos"],
-            "RS": ["Porto Alegre (Capital)", "Caxias do Sul", "Pelotas", "Canoas", "Santa Maria", "Gravataí", "Viamão", "Novo Hamburgo", "São Leopoldo", "Rio Grande"],
-            "RO": ["Porto Velho (Capital)", "Ji-Paraná", "Ariquemes", "Vilhena", "Cacoal", "Jaru", "Rolim de Moura", "Pimenta Bueno", "Guajará-Mirim"],
-            "RR": ["Boa Vista (Capital)", "Rorainópolis", "Caracaraí", "Mucajaí", "Bonfim", "Cantá", "Alto Alegre"],
-            "SC": ["Florianópolis (Capital)", "Joinville", "Blumenau", "São José", "Criciúma", "Chapecó", "Itajaí", "Jaraguá do Sul", "Lages", "Palhoça"],
-            "SP": ["São Paulo (Capital)", "Campinas", "Santos", "Sorocaba", "Ribeirão Preto", "São José dos Campos", "Mauá", "Mogi das Cruzes", "Diadema", "Piracicaba", "Jundiaí", "Carapicuíba"],
-            "SE": ["Aracaju (Capital)", "Nossa Senhora do Socorro", "Lagarto", "Itabaiana", "São Cristóvão", "Estância", "Tobias Barreto", "Simão Dias"],
-            "TO": ["Palmas (Capital)", "Araguaína", "Gurupi", "Porto Nacional", "Paraíso do Tocantins", "Colinas do Tocantins", "Dianópolis"],
-            "ZZ": [
-                "Estados Unidos - Miami (Consulado)", "Estados Unidos - Nova York (Consulado)", "Estados Unidos - Boston (Consulado)", 
-                "Portugal - Lisboa (Embaixada / Seção Eleitoral)", "Portugal - Porto (Consulado)", "Japão - Tóquio (Embaixada)", 
-                "Japão - Nagoia (Consulado)", "Espanha - Madri (Embaixada)", "Reino Unido - Londres (Consulado)", "França - Paris (Embaixada)"
-            ]
-        };
-
-        // ESCUTADOR DE EVENTOS NATIVO E ROBUSTO PARA MOBILE (DISPARA EM QUALQUER INTERAÇÃO DE TOQUE OU MUDANÇA)
-        document.addEventListener("DOMContentLoaded", () => {
-            const stateInput = document.getElementById('state-input');
-            if (stateInput) {
-                // Monitoriza mudança e cliques no mobile
-                stateInput.addEventListener('change', updateCitySuggestions);
-                stateInput.addEventListener('input', updateCitySuggestions);
-                stateInput.addEventListener('blur', updateCitySuggestions);
-                stateInput.addEventListener('touchend', () => {
-                    setTimeout(updateCitySuggestions, 100);
-                });
-            }
-        });
-
-        const presidentFilters = ["Geral do País", "Região Norte", "Região Nordeste", "Região Centro-Oeste", "Região Sudeste", "Região Sul"];
         const internationalCountryList = [
             "🌎 Todos os Países", "Estados Unidos (EUA)", "Portugal", "Japão", "Espanha", "Reino Unido", "França", "Itália", "Alemanha", "Argentina"
         ];
+
+        // BUSCA DINÂMICA VIA API OFICIAL DO IBGE PARA TODAS AS CIDADES DO BRASIL
+        async function updateCitySuggestions() {
+            const stateVal = document.getElementById('state-input').value;
+            const citySelect = document.getElementById('city-input');
+            const cityLabel = document.getElementById('city-label-text');
+            
+            citySelect.innerHTML = '<option value="">Carregando Cidades...</option>';
+
+            if(!stateVal) {
+                citySelect.innerHTML = '<option value="">Selecione o Estado...</option>';
+                return;
+            }
+
+            if(stateVal === 'ZZ') {
+                cityLabel.innerText = "🌎 Selecionar País (Exterior)";
+                citySelect.innerHTML = '<option value="">Selecione o País...</option>';
+                internationalCountryList.forEach(country => {
+                    const opt = document.createElement('option');
+                    opt.value = country;
+                    opt.innerText = country;
+                    citySelect.appendChild(opt);
+                });
+                return;
+            }
+
+            cityLabel.innerText = "Município / Capital";
+
+            try {
+                const response = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${stateVal}/municipios?orderBy=nome`);
+                const citiesData = await response.json();
+                
+                citySelect.innerHTML = '<option value="">Selecione a Cidade...</option>';
+                
+                citiesData.forEach(city => {
+                    const opt = document.createElement('option');
+                    opt.value = city.nome;
+                    opt.innerText = city.nome;
+                    citySelect.appendChild(opt);
+                });
+            } catch (error) {
+                citySelect.innerHTML = '<option value="">Erro ao carregar cidades</option>';
+            }
+        }
+
+        const presidentFilters = ["Geral do País", "Região Norte", "Região Nordeste", "Região Centro-Oeste", "Região Sudeste", "Região Sul"];
         const macroStateFilters = ["Geral Estado", "Geral da Capital", "Geral do Interior"];
         const microZoneFilters = ["Zona Norte", "Zona Sul", "Zona Leste", "Zona Oeste", "Zona Centro-Oeste", "Zona Centro-Sul", "Zona Central / Centro"];
         const mayorCapitalFilters = ["Geral da Capital"];
@@ -982,7 +988,6 @@
             if(pass === 'adm2026' || pass === '') {
                 document.getElementById('screen-admin-login').classList.add('hidden');
                 document.getElementById('screen-results').classList.remove('hidden');
-                document.getElementById('results-badge-title').innerText = `Painel ADM (${currentTurn}º Turno)`;
                 setupResultTabs();
             } else {
                 alert('Chave incorreta. Tente "adm2026".');
@@ -1010,32 +1015,6 @@
             document.getElementById('screen-voting').classList.remove('hidden');
             currentStep = 0;
             renderBallot();
-        }
-
-        function updateCitySuggestions() {
-            const stateVal = document.getElementById('state-input').value;
-            const citySelect = document.getElementById('city-input');
-            const cityLabel = document.getElementById('city-label-text');
-            
-            citySelect.innerHTML = '<option value="">Selecione...</option>';
-
-            if(!stateVal) return;
-
-            if(stateVal === 'ZZ') {
-                cityLabel.innerText = "🌎 Selecionar País (Exterior)";
-            } else {
-                cityLabel.innerText = "Município / Capital";
-            }
-
-            if(statesCityMap[stateVal]) {
-                const sortedCities = [...statesCityMap[stateVal]].sort((a, b) => a.localeCompare(b, 'pt-BR'));
-                sortedCities.forEach(city => {
-                    const opt = document.createElement('option');
-                    opt.value = city;
-                    opt.innerText = city;
-                    citySelect.appendChild(opt);
-                });
-            }
         }
 
         function renderBallot() {
@@ -1121,7 +1100,6 @@
         function goToResults() {
             document.getElementById('screen-success').classList.add('hidden');
             document.getElementById('screen-results').classList.remove('hidden');
-            document.getElementById('results-badge-title').innerText = `Painel Analítico (${currentTurn}º Turno)`;
             setupResultTabs();
         }
 
@@ -1134,7 +1112,7 @@
                 const tabBtn = document.createElement('button');
                 tabBtn.className = `tab-btn ${index === 0 ? 'active' : ''}`;
                 
-                let tabName = ballot.title.replace(" da República", "").replace(" do Estado", "").replace(" Municipal", "");
+                let tabName = ballot.title;
                 tabBtn.innerText = tabName;
                 
                 tabBtn.onclick = (e) => switchResultTab(ballot.id, e.currentTarget);
@@ -1157,73 +1135,76 @@
             citySelect.disabled = false;
             
             let statesHTML = `
-                <option value="AM">Amazonas (AM)</option>
-                <option value="AC">Acre (AC)</option>
-                <option value="AL">Alagoas (AL)</option>
-                <option value="AP">Amapá (AP)</option>
-                <option value="BA">Bahia (BA)</option>
-                <option value="CE">Ceará (CE)</option>
-                <option value="DF">Distrito Federal (DF)</option>
-                <option value="ES">Espírito Santo (ES)</option>
-                <option value="GO">Goiás (GO)</option>
-                <option value="MA">Maranhão (MA)</option>
-                <option value="MT">Mato Grosso (MT)</option>
-                <option value="MS">Mato Grosso do Sul (MS)</option>
-                <option value="MG">Minas Gerais (MG)</option>
-                <option value="PA">Pará (PA)</option>
-                <option value="PB">Paraíba (PB)</option>
-                <option value="PR">Paraná (PR)</option>
-                <option value="PE">Pernambuco (PE)</option>
-                <option value="PI">Piauí (PI)</option>
-                <option value="RJ">Rio de Janeiro (RJ)</option>
-                <option value="RN">Rio Grande do Norte (RN)</option>
-                <option value="RS">Rio Grande do Sul (RS)</option>
-                <option value="RO">Rondônia (RO)</option>
-                <option value="RR">Roraima (RR)</option>
-                <option value="SC">Santa Catarina (SC)</option>
-                <option value="SP">São Paulo (SP)</option>
-                <option value="SE">Sergipe (SE)</option>
-                <option value="TO">Tocantins (TO)</option>
+                <option value="AM">Amazonas - AM</option>
+                <option value="AC">Acre - AC</option>
+                <option value="AL">Alagoas - AL</option>
+                <option value="AP">Amapá - AP</option>
+                <option value="BA">Bahia - BA</option>
+                <option value="CE">Ceará - CE</option>
+                <option value="DF">Distrito Federal - DF</option>
+                <option value="ES">Espírito Santo - ES</option>
+                <option value="GO">Goiás - GO</option>
+                <option value="MA">Maranhão - MA</option>
+                <option value="MT">Mato Grosso - MT</option>
+                <option value="MS">Mato Grosso do Sul - MS</option>
+                <option value="MG">Minas Gerais - MG</option>
+                <option value="PA">Pará - PA</option>
+                <option value="PB">Paraíba - PB</option>
+                <option value="PR">Paraná - PR</option>
+                <option value="PE">Pernambuco - PE</option>
+                <option value="PI">Piauí - PI</option>
+                <option value="RJ">Rio de Janeiro - RJ</option>
+                <option value="RN">Rio Grande do Norte - RN</option>
+                <option value="RS">Rio Grande do Sul - RS</option>
+                <option value="RO">Rondônia - RO</option>
+                <option value="RR">Roraima - RR</option>
+                <option value="SC">Santa Catarina - SC</option>
+                <option value="SP">São Paulo - SP</option>
+                <option value="SE">Sergipe - SE</option>
+                <option value="TO">Tocantins - TO</option>
             `;
 
             if(category === 'president' || category === 'president_2t') {
-                statesHTML += `<option value="ZZ">🌎 Outros Países</option>`;
+                statesHTML += `<option value="ZZ">🌎 Outros Países (Exterior)</option>`;
             }
 
             stateSelect.innerHTML = statesHTML;
             onStateFilterChange();
         }
 
-        function onStateFilterChange() {
+        async function onStateFilterChange() {
             const stateVal = document.getElementById('filter-state-select').value;
             const citySelect = document.getElementById('filter-city-select');
             const secondLabel = document.getElementById('filter-second-label');
             
-            citySelect.innerHTML = '';
+            citySelect.innerHTML = '<option value="">Carregando...</option>';
 
             if(stateVal === 'ZZ') {
                 secondLabel.innerText = "Países:";
+                citySelect.innerHTML = '<option value="Todos os Países">🌎 Todos os Países</option>';
                 internationalCountryList.forEach(country => {
-                    const opt = document.createElement('option');
-                    opt.value = country;
-                    opt.innerText = country;
-                    citySelect.appendChild(opt);
+                    if(country !== "🌎 Todos os Países") {
+                        const opt = document.createElement('option');
+                        opt.value = country;
+                        opt.innerText = country;
+                        citySelect.appendChild(opt);
+                    }
                 });
             } else {
                 secondLabel.innerText = "Município / Países:";
-                const optAll = document.createElement('option');
-                optAll.value = "Todas as Cidades";
-                optAll.innerText = "🏙️ Todas as Cidades";
-                citySelect.appendChild(optAll);
-
-                if(statesCityMap[stateVal]) {
-                    const sortedFilterCities = [...statesCityMap[stateVal]].sort((a, b) => a.localeCompare(b, 'pt-BR'));
-                    sortedFilterCities.forEach(city => {
+                try {
+                    const response = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${stateVal}/municipios?orderBy=nome`);
+                    const citiesData = await response.json();
+                    
+                    citySelect.innerHTML = '<option value="Todas as Cidades">🏙️ Todas as Cidades</option>';
+                    citiesData.forEach(city => {
                         const opt = document.createElement('option');
-                        opt.value = city;
-                        opt.innerText = city;
+                        opt.value = city.nome;
+                        opt.innerText = city.nome;
                         citySelect.appendChild(opt);
                     });
+                } catch(e) {
+                    citySelect.innerHTML = '<option value="Todas as Cidades">🏙️ Todas as Cidades</option>';
                 }
             }
 
@@ -1424,7 +1405,7 @@
                 <h3>RELATÓRIO TÉCNICO DE OPINIÃO PÚBLICA</h3>
                 <p><strong>Fase Eleitoral:</strong> ${currentTurn}º Turno</p>
                 <p><strong>Cargo Analisado:</strong> ${lastLoadedCategory.toUpperCase()}</p>
-                <p><strong>Recorte Geográfico:</strong> Estado/País: ${stateVal} | País Selecionado: ${cityVal} | Filtro: ${lastLoadedKey}</p>
+                <p><strong>Recorte Geográfico:</strong> Estado/País: ${stateVal} | Cidade/País: ${cityVal} | Filtro: ${lastLoadedKey}</p>
                 <hr>
                 <p><strong>📊 CONSOLIDADO:</strong></p>
             `;
