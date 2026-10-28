@@ -19,7 +19,7 @@
         }
 
         html, body {
-            height: 100vh;
+            min-height: 100vh;
             width: 100vw;
             margin: 0;
             padding: 0;
@@ -28,45 +28,40 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
-            align-items: center;
-            overflow: hidden;
+            align-items: flex-start;
             box-sizing: border-box;
         }
 
-        /* Moldura dinâmica que se ajusta 100% ao ecrã do telemóvel sem rolagens extras */
+        /* Moldura fluida que se adapta e permite rolagem natural sem cortes */
         .phone-frame {
             width: 100%;
             max-width: 410px;
-            height: 100%;
-            max-height: 860px;
+            min-height: 100vh;
             background-color: var(--card-bg);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             position: relative;
             box-sizing: border-box;
-            border-radius: 10px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-            border: 2px solid var(--border);
-            overflow: hidden;
+            border-left: 2px solid var(--border);
+            border-right: 2px solid var(--border);
         }
 
         .screen {
             flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            padding: 6px 10px;
-            overflow: hidden;
+            padding: 12px 14px;
             box-sizing: border-box;
+            gap: 10px;
         }
 
         .screen-content {
             flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
-            overflow: hidden;
+            gap: 10px;
         }
 
         h1, h2, h3 {
@@ -77,11 +72,11 @@
             text-align: center;
             background: linear-gradient(135deg, rgba(15, 118, 110, 0.25) 0%, rgba(56, 189, 248, 0.15) 100%);
             border: 1px solid #38bdf8;
-            border-radius: 5px;
-            padding: 3px;
+            border-radius: 6px;
+            padding: 6px;
         }
         .app-brand-header h1 {
-            font-size: 0.88rem;
+            font-size: 1rem;
             font-weight: 900;
             color: #38bdf8;
             letter-spacing: 0.5px;
@@ -89,21 +84,21 @@
         }
         .app-brand-header p {
             margin: 0;
-            font-size: 0.42rem;
+            font-size: 0.5rem;
             color: var(--text-muted);
             letter-spacing: 1px;
             text-transform: uppercase;
         }
 
         .header-title {
-            font-size: 0.72rem;
+            font-size: 0.85rem;
             font-weight: bold;
             color: var(--text-main);
             text-align: center;
         }
 
         .subtitle {
-            font-size: 0.48rem;
+            font-size: 0.55rem;
             color: var(--text-muted);
             text-align: center;
         }
@@ -111,10 +106,10 @@
         .status-banner {
             background-color: rgba(56, 189, 248, 0.1);
             border: 1px solid #38bdf8;
-            border-radius: 4px;
-            padding: 2px 4px;
+            border-radius: 6px;
+            padding: 5px 8px;
             text-align: center;
-            font-size: 0.52rem;
+            font-size: 0.6rem;
             color: var(--highlight-yellow);
             font-weight: bold;
         }
@@ -122,42 +117,42 @@
         .tse-notice-box {
             background-color: rgba(15, 118, 110, 0.15);
             border: 1px solid #0f766e;
-            border-radius: 4px;
-            padding: 2px 4px;
+            border-radius: 6px;
+            padding: 5px 8px;
             text-align: center;
         }
         .tse-notice-box span {
-            font-size: 0.46rem;
+            font-size: 0.52rem;
             color: #38bdf8;
             font-weight: bold;
             display: block;
         }
         .tse-notice-box p {
             margin: 0;
-            font-size: 0.42rem;
+            font-size: 0.46rem;
             color: var(--text-muted);
-            line-height: 1.1;
+            line-height: 1.2;
         }
 
         .form-group {
-            margin-bottom: 2px;
+            margin-bottom: 6px;
         }
 
         label {
             display: block;
-            font-size: 0.48rem;
+            font-size: 0.55rem;
             color: var(--text-muted);
-            margin-bottom: 1px;
+            margin-bottom: 2px;
         }
 
         input, select {
             width: 100%;
-            padding: 4px 6px;
+            padding: 8px 10px;
             background-color: #090d16;
             border: 1px solid var(--border);
-            border-radius: 4px;
+            border-radius: 6px;
             color: var(--text-main);
-            font-size: 0.62rem;
+            font-size: 0.75rem;
             box-sizing: border-box;
         }
 
@@ -170,15 +165,16 @@
         .checkbox-group {
             display: flex;
             align-items: flex-start;
-            gap: 4px;
-            font-size: 0.48rem;
+            gap: 6px;
+            font-size: 0.55rem;
             color: var(--text-main);
-            line-height: 1.1;
+            line-height: 1.2;
+            margin: 6px 0;
         }
 
         .checkbox-group input {
-            width: 11px;
-            height: 11px;
+            width: 14px;
+            height: 14px;
             margin-top: 1px;
             accent-color: var(--accent);
             cursor: pointer;
@@ -186,27 +182,28 @@
 
         button {
             width: 100%;
-            padding: 5px;
+            padding: 10px;
             background-color: #1e293b;
             color: white;
             border: 1px solid #475569;
-            border-radius: 4px;
-            font-size: 0.62rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
             font-weight: bold;
             cursor: pointer;
+            margin-top: 4px;
         }
 
         #candidates-container {
             display: flex;
             flex-direction: column;
-            gap: 3px;
+            gap: 6px;
         }
 
         .candidate-card {
             background-color: #090d16;
             border: 2px solid var(--border);
-            border-radius: 5px;
-            padding: 4px 6px;
+            border-radius: 8px;
+            padding: 8px 10px;
             display: flex;
             align-items: center;
             cursor: pointer;
@@ -219,40 +216,41 @@
         }
 
         .candidate-img {
-            width: 26px;
-            height: 26px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 6px;
+            margin-right: 10px;
             border: 1px solid var(--border);
         }
 
         .candidate-info h4 {
-            margin: 0 0 1px 0;
-            font-size: 0.62rem;
+            margin: 0 0 2px 0;
+            font-size: 0.75rem;
         }
 
         .candidate-info p {
             margin: 0;
-            font-size: 0.46rem;
+            font-size: 0.52rem;
             color: var(--text-muted);
         }
 
         .special-votes-wrapper {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 3px;
+            gap: 6px;
+            margin: 6px 0;
         }
 
         .special-vote-btn {
             background-color: #1e293b;
             border: 1px dashed var(--border);
             text-align: center;
-            padding: 4px 2px;
-            border-radius: 4px;
+            padding: 8px 4px;
+            border-radius: 6px;
             cursor: pointer;
             font-weight: bold;
-            font-size: 0.48rem;
+            font-size: 0.55rem;
             color: var(--text-muted);
         }
         .special-vote-btn.selected {
@@ -264,19 +262,19 @@
         .pattern-lock-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            width: 150px;
-            margin: 6px auto;
-            padding: 8px;
+            gap: 14px;
+            width: 180px;
+            margin: 12px auto;
+            padding: 12px;
             background-color: #090d16;
             border: 1px solid var(--border);
-            border-radius: 8px;
+            border-radius: 10px;
             justify-items: center;
             align-items: center;
         }
         .pattern-dot {
-            width: 22px;
-            height: 22px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             background-color: #334155;
             border: 2px solid var(--border);
@@ -286,7 +284,7 @@
         .pattern-dot.active {
             background-color: var(--accent);
             border-color: #38bdf8;
-            box-shadow: 0 0 8px #38bdf8;
+            box-shadow: 0 0 10px #38bdf8;
         }
 
         .hidden {
@@ -295,22 +293,22 @@
 
         .success-box {
             text-align: center;
-            padding: 8px 4px;
+            padding: 20px 10px;
         }
 
         .success-icon {
-            font-size: 1.5rem;
+            font-size: 2.2rem;
             color: #10b981;
-            margin-bottom: 2px;
+            margin-bottom: 6px;
         }
 
         .badge {
             display: inline-block;
             background-color: rgba(100, 116, 139, 0.2);
             color: #94a3b8;
-            padding: 2px 6px;
-            border-radius: 10px;
-            font-size: 0.48rem;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.52rem;
             font-weight: bold;
             text-transform: uppercase;
         }
@@ -318,22 +316,22 @@
         .result-tabs {
             display: flex;
             flex-direction: row;
-            gap: 2px;
+            gap: 4px;
             background-color: #090d16;
-            padding: 2px;
-            border-radius: 4px;
+            padding: 4px;
+            border-radius: 6px;
             border: 1px solid var(--border);
         }
         .tab-btn {
             flex: 1;
             min-width: 0;
-            padding: 4px 2px;
+            padding: 6px 4px;
             background: transparent;
             border: none;
             color: var(--text-muted);
-            font-size: 0.48rem;
+            font-size: 0.52rem;
             font-weight: bold;
-            border-radius: 3px;
+            border-radius: 4px;
             cursor: pointer;
             text-align: center;
             white-space: nowrap;
@@ -347,25 +345,25 @@
 
         .filter-box {
             background-color: #090d16;
-            padding: 4px 6px;
-            border-radius: 4px;
+            padding: 8px 10px;
+            border-radius: 6px;
             border: 1px solid var(--border);
-            font-size: 0.5rem;
+            font-size: 0.55rem;
         }
 
         .sub-filters {
             display: flex;
             flex-wrap: wrap;
-            gap: 2px;
-            margin-top: 2px;
+            gap: 4px;
+            margin-top: 4px;
         }
         .sub-filter-btn {
-            padding: 2px 4px;
+            padding: 4px 6px;
             background: #1e293b;
             border: 1px solid var(--border);
             color: var(--text-muted);
-            font-size: 0.46rem;
-            border-radius: 3px;
+            font-size: 0.5rem;
+            border-radius: 4px;
             cursor: pointer;
         }
         .sub-filter-btn.active {
@@ -375,10 +373,10 @@
         }
 
         .section-divider {
-            margin: 2px 0;
+            margin: 6px 0;
             border-top: 1px dashed var(--border);
-            padding-top: 2px;
-            font-size: 0.44rem;
+            padding-top: 4px;
+            font-size: 0.48rem;
             font-weight: bold;
             color: #38bdf8;
             text-transform: uppercase;
@@ -389,19 +387,20 @@
             display: flex;
             background-color: #090d16;
             border: 1px solid var(--border);
-            border-radius: 4px;
-            padding: 2px;
+            border-radius: 6px;
+            padding: 3px;
         }
         .mode-btn {
             flex: 1;
-            padding: 3px;
+            padding: 6px;
             background: transparent;
             border: none;
             color: var(--text-muted);
-            font-size: 0.48rem;
+            font-size: 0.52rem;
             font-weight: bold;
             cursor: pointer;
-            border-radius: 3px;
+            border-radius: 4px;
+            margin-top: 0;
         }
         .mode-btn.active {
             background-color: var(--accent);
@@ -409,82 +408,84 @@
         }
 
         .result-bar-container {
-            margin-bottom: 2px;
+            margin-bottom: 6px;
         }
 
         .result-meta {
             display: flex;
             justify-content: space-between;
-            font-size: 0.5rem;
-            margin-bottom: 1px;
+            font-size: 0.58rem;
+            margin-bottom: 2px;
         }
 
         .progress-bar {
             width: 100%;
-            height: 3px;
+            height: 6px;
             background-color: #090d16;
-            border-radius: 2px;
+            border-radius: 3px;
             overflow: hidden;
+            border: 1px solid var(--border);
         }
 
         .progress-fill {
             height: 100%;
             background-color: #0f766e;
-            border-radius: 2px;
+            border-radius: 3px;
             width: 0%;
         }
 
         .admin-stat-card {
             background-color: #090d16;
             border: 1px solid var(--border);
-            border-radius: 4px;
-            padding: 3px;
+            border-radius: 6px;
+            padding: 6px;
             text-align: center;
         }
         .admin-stat-card h3 {
             margin: 0;
-            font-size: 0.75rem;
+            font-size: 0.9rem;
             color: #38bdf8;
         }
         .admin-stat-card p {
             margin: 0;
-            font-size: 0.44rem;
+            font-size: 0.48rem;
             color: var(--text-muted);
         }
 
         .report-preview-box {
             background-color: #ffffff;
             color: #0f172a;
-            border-radius: 4px;
-            padding: 5px;
-            font-size: 0.5rem;
-            max-height: 110px;
+            border-radius: 6px;
+            padding: 10px;
+            font-size: 0.6rem;
+            max-height: 220px;
             overflow-y: auto;
             text-align: left;
+            box-sizing: border-box;
         }
         .report-preview-box h3 {
             color: #0f766e;
             text-align: center;
-            margin-bottom: 2px;
-            font-size: 0.6rem;
+            margin-bottom: 4px;
+            font-size: 0.7rem;
         }
         .report-preview-box hr {
             border: 0;
             border-top: 1px solid #cbd5e1;
-            margin: 2px 0;
+            margin: 6px 0;
         }
 
         .external-sponsor-banner {
             width: 100%;
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             border-top: 1px dashed #475569;
-            padding: 4px 8px;
+            padding: 8px 12px;
             text-align: center;
             box-sizing: border-box;
-            margin-top: 4px;
+            margin-top: auto;
         }
         .external-sponsor-banner span {
-            font-size: 0.38rem;
+            font-size: 0.42rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: var(--text-muted);
@@ -492,7 +493,7 @@
         }
         .external-sponsor-banner p {
             margin: 0;
-            font-size: 0.5rem;
+            font-size: 0.58rem;
             color: #38bdf8;
             font-weight: bold;
         }
@@ -520,7 +521,7 @@
 
                 <!-- TELA 1: CADASTRO DEMOGRÁFICO DO ELEITOR -->
                 <div id="screen-register" class="view">
-                    <div style="text-align: center;">
+                    <div style="text-align: center; margin-bottom: 6px;">
                         <h1 class="header-title">Perfil Demográfico</h1>
                         <p class="subtitle">Dados obrigatórios para ponderação estatística oficial (IBGE / TSE).</p>
                     </div>
@@ -530,7 +531,7 @@
                         <input type="text" id="whatsapp-input" placeholder="(11) 99999-9999">
                     </div>
 
-                    <div style="display: flex; gap: 4px;">
+                    <div style="display: flex; gap: 6px;">
                         <div class="form-group" style="flex: 1;">
                             <label>Estado / Países</label>
                             <select id="state-input" onchange="updateCitySuggestions()">
@@ -573,7 +574,7 @@
                         </div>
                     </div>
 
-                    <div style="display: flex; gap: 4px;">
+                    <div style="display: flex; gap: 6px;">
                         <div class="form-group" style="flex: 1;">
                             <label>Zona / Região</label>
                             <select id="zone-input">
@@ -603,7 +604,7 @@
                         </div>
                     </div>
 
-                    <div style="display: flex; gap: 4px;">
+                    <div style="display: flex; gap: 6px;">
                         <div class="form-group" style="flex: 1;">
                             <label>Gênero</label>
                             <select id="gender-input">
@@ -629,17 +630,17 @@
 
                     <div class="checkbox-group">
                         <input type="checkbox" id="lgpd-check">
-                        <label for="lgpd-check" style="color: var(--text-main); font-size: 0.48rem; cursor: pointer;">Autorizo o uso destes dados para fins estatísticos e anonimização conforme LGPD e TSE.</label>
+                        <label for="lgpd-check" style="color: var(--text-main); font-size: 0.52rem; cursor: pointer;">Autorizo o uso destes dados para fins estatísticos e anonimização conforme LGPD e TSE.</label>
                     </div>
 
                     <button onclick="goToAuth()">Prosseguir para Autenticação</button>
                     
-                    <button onclick="openAdminLogin()" style="background-color: #090d16; border: 1px dashed var(--border); color: var(--text-muted); font-size: 0.48rem;">🔒 Acesso Restrito (Gestor / ADM)</button>
+                    <button onclick="openAdminLogin()" style="background-color: #090d16; border: 1px dashed var(--border); color: var(--text-muted); font-size: 0.52rem;">🔒 Acesso Restrito (Gestor / ADM)</button>
                 </div>
 
                 <!-- TELA 1.1: LOGIN DO ADMINISTRADOR -->
                 <div id="screen-admin-login" class="view hidden">
-                    <div style="text-align: center;">
+                    <div style="text-align: center; margin-bottom: 6px;">
                         <span class="badge" style="background-color: rgba(56, 189, 248, 0.2); color: #38bdf8;">Painel de Controle</span>
                         <h1 class="header-title">Autenticação do Gestor</h1>
                         <p class="subtitle">Insira a chave mestra do sistema para acessar a retaguarda analítica.</p>
@@ -681,7 +682,7 @@
                         <div class="pattern-dot" data-id="9" onclick="toggleDot(this)"></div>
                     </div>
 
-                    <p style="text-align: center; font-size: 0.48rem; color: var(--text-muted); margin: 0;">Toque em pelo menos 3 pontos para criar seu padrão ou clique em biometria.</p>
+                    <p style="text-align: center; font-size: 0.52rem; color: var(--text-muted); margin: 0;">Toque em pelo menos 3 pontos para criar seu padrão ou clique em biometria.</p>
 
                     <button onclick="startVoting()" style="background-color: #0f766e; border-color: #14b8a6;">Confirmar Padrão e Acessar Urna</button>
                     <button onclick="simulateBiometric()" style="background-color: #334155;">👆 Usar Biometria Facial / Digital</button>
@@ -691,7 +692,7 @@
                 <div id="screen-voting" class="view hidden">
                     <div style="text-align: center;">
                         <span class="badge" id="voting-badge">Etapa 1 de X</span>
-                        <h2 id="voting-title" style="font-size: 0.75rem;">Cargo</h2>
+                        <h2 id="voting-title" style="font-size: 0.85rem;">Cargo</h2>
                         <p class="subtitle" id="voting-subtitle">Selecione 1 opção</p>
                     </div>
 
@@ -709,17 +710,17 @@
                 <!-- TELA 4: SUCESSO E BLOQUEIO -->
                 <div id="screen-success" class="view hidden success-box">
                     <div class="success-icon">🛡️</div>
-                    <h2 style="color: #10b981; font-size: 0.75rem;">Voto Computado e Anonimizado</h2>
+                    <h2 style="color: #10b981; font-size: 0.85rem;">Voto Computado e Anonimizado</h2>
                     <p class="subtitle">Seu voto foi segregado em urna cega. O histórico foi apagado deste dispositivo.</p>
-                    <div style="background-color: #090d16; padding: 4px; border-radius: 4px; border: 1px solid var(--border);">
-                        <p style="font-size: 0.48rem; margin: 0; color: var(--text-muted);">Status: <strong style="color: var(--text-main);">Acesso encerrado para esta consulta.</strong></p>
+                    <div style="background-color: #090d16; padding: 6px; border-radius: 6px; border: 1px solid var(--border); margin: 10px 0;">
+                        <p style="font-size: 0.52rem; margin: 0; color: var(--text-muted);">Status: <strong style="color: var(--text-main);">Acesso encerrado para esta consulta.</strong></p>
                     </div>
                     <button onclick="goToResults()">Consultar Resultados e Ficha TSE</button>
                 </div>
 
                 <!-- TELA 5: RESULTADOS / PAINEL ANALÍTICO ADM -->
                 <div id="screen-results" class="view hidden">
-                    <div style="display: flex; gap: 4px;">
+                    <div style="display: flex; gap: 6px;">
                         <div class="admin-stat-card" style="flex: 1;">
                             <h3 id="stat-total-votes">4.500</h3>
                             <p>Amostra Consolidada</p>
@@ -734,13 +735,13 @@
 
                     <!-- FILTROS GEOGRÁFICOS DINÂMICOS -->
                     <div class="filter-box">
-                        <div style="display: flex; gap: 4px; margin-bottom: 2px;">
-                            <label style="flex: 1; font-size: 0.48rem; color: var(--text-muted); font-weight: bold;">Estado / Países:</label>
-                            <label id="filter-second-label" style="flex: 1; font-size: 0.48rem; color: var(--text-muted); font-weight: bold;">Município / Países:</label>
+                        <div style="display: flex; gap: 6px; margin-bottom: 4px;">
+                            <label style="flex: 1; font-size: 0.52rem; color: var(--text-muted); font-weight: bold;">Estado / Países:</label>
+                            <label id="filter-second-label" style="flex: 1; font-size: 0.52rem; color: var(--text-muted); font-weight: bold;">Município / Países:</label>
                         </div>
 
-                        <div style="display: flex; gap: 4px; margin-bottom: 3px;" id="geographic-selectors-wrapper">
-                            <select id="filter-state-select" onchange="onStateFilterChange()" style="flex: 1; font-size: 0.48rem; padding: 3px;">
+                        <div style="display: flex; gap: 6px; margin-bottom: 6px;" id="geographic-selectors-wrapper">
+                            <select id="filter-state-select" onchange="onStateFilterChange()" style="flex: 1; font-size: 0.52rem; padding: 6px;">
                                 <option value="AM">Amazonas - AM</option>
                                 <option value="AC">Acre - AC</option>
                                 <option value="AL">Alagoas - AL</option>
@@ -771,13 +772,13 @@
                                 <option value="ZZ">🌎 Outros Países (Exterior)</option>
                             </select>
                             
-                            <select id="filter-city-select" onchange="onCityFilterChange()" style="flex: 1; font-size: 0.48rem; padding: 3px;">
+                            <select id="filter-city-select" onchange="onCityFilterChange()" style="flex: 1; font-size: 0.52rem; padding: 6px;">
                                 <option value="Todas as Cidades">🏙️ Todas as Cidades</option>
                             </select>
                         </div>
 
-                        <label id="macro-label" style="margin-bottom: 2px; color: var(--text-main); font-weight: bold; font-size: 0.48rem;">Recorte Geográfico:</label>
-                        <div id="macro-filters-container" class="sub-filters" style="margin-bottom: 2px;"></div>
+                        <label id="macro-label" style="margin-bottom: 4px; color: var(--text-main); font-weight: bold; font-size: 0.52rem;">Recorte Geográfico:</label>
+                        <div id="macro-filters-container" class="sub-filters" style="margin-bottom: 4px;"></div>
                         <div id="section-divider-elem" class="section-divider">📍 Zonas da Cidade Selecionada</div>
                         <div id="micro-filters-container" class="sub-filters"></div>
                     </div>
@@ -789,33 +790,33 @@
 
                     <div id="results-content-container"></div>
 
-                    <button onclick="openExportReport()" style="background-color: #0f766e; border-color: #14b8a6; font-size: 0.52rem;">📄 Gerar Relatório Oficial (Imprensa / PDF)</button>
+                    <button onclick="openExportReport()" style="background-color: #0f766e; border-color: #14b8a6; font-size: 0.6rem;">📄 Gerar Relatório Oficial (Imprensa / PDF)</button>
 
-                    <div style="background-color: #090d16; padding: 4px; border-radius: 4px; border: 1px solid var(--border); font-size: 0.48rem; color: var(--text-muted); line-height: 1.1;">
-                        <strong style="color: var(--text-main); display: block; margin-bottom: 1px;">Compliance (TSE):</strong>
+                    <div style="background-color: #090d16; padding: 6px; border-radius: 6px; border: 1px solid var(--border); font-size: 0.52rem; color: var(--text-muted); line-height: 1.2;">
+                        <strong style="color: var(--text-main); display: block; margin-bottom: 2px;">Compliance (TSE):</strong>
                         • Protocolo PesqEle: BR-02849/2026 | Amostra: 4.500 Ponderados | Margem: ± 1.5%
                     </div>
 
-                    <button onclick="resetApp()" style="padding: 4px; background-color: #334155; font-size: 0.48rem;">Sair / Reiniciar Teste</button>
+                    <button onclick="resetApp()" style="padding: 6px; background-color: #334155; font-size: 0.52rem;">Sair / Reiniciar Teste</button>
                 </div>
 
                 <!-- TELA 6: EXPORTAÇÃO DE RELATÓRIO -->
                 <div id="screen-export" class="view hidden">
                     <div style="text-align: center;">
                         <span class="badge" style="background-color: rgba(16, 185, 129, 0.2); color: #10b981;">Documento Executivo</span>
-                        <h2 style="font-size: 0.75rem; margin-bottom: 2px;">Relatório Oficial para Imprensa</h2>
+                        <h2 style="font-size: 0.85rem; margin-bottom: 4px;">Relatório Oficial para Imprensa</h2>
                         <p class="subtitle">Pronto para distribuição institucional, jurídica e partidária.</p>
                     </div>
 
                     <div class="report-preview-box" id="report-content-box"></div>
 
-                    <button onclick="copyReportText()" style="background-color: #2563eb; border-color: #3b82f6; font-size: 0.52rem;">📋 Copiar Relatório Completo</button>
-                    <button onclick="downloadReportMock()" style="background-color: #0f766e; border-color: #14b8a6; font-size: 0.52rem;">💾 Salvar Arquivo (PDF)</button>
-                    <button onclick="backToResults()" style="background-color: #334155; font-size: 0.52rem;">Voltar ao Painel Analítico</button>
+                    <button onclick="copyReportText()" style="background-color: #2563eb; border-color: #3b82f6; font-size: 0.6rem;">📋 Copiar Relatório Completo</button>
+                    <button onclick="downloadReportMock()" style="background-color: #0f766e; border-color: #14b8a6; font-size: 0.6rem;">💾 Salvar Arquivo (PDF)</button>
+                    <button onclick="backToResults()" style="background-color: #334155; font-size: 0.6rem;">Voltar ao Painel Analítico</button>
                 </div>
             </div>
 
-            <!-- BANNER DE PATROCÍNIO EXTERNO INTEGRADO (Visível APENAS nas telas 1 e 2) -->
+            <!-- BANNER DE PATROCÍNIO EXTERNO INTEGRADO (Visível em TODAS as telas agora sem sumir!) -->
             <div class="external-sponsor-banner" id="external-sponsor-container">
                 <span>Patrocínio Institucional / Comercial</span>
                 <p>🏢 Anúncio Comercial Genérico ou Apoio Tecnológico 2026</p>
@@ -883,13 +884,6 @@
         const internationalCountryList = [
             "🌎 Todos os Países", "Estados Unidos (EUA)", "Portugal", "Japão", "Espanha", "Reino Unido", "França", "Itália", "Alemanha", "Argentina"
         ];
-
-        function toggleSponsorVisibility(show) {
-            const sponsorBanner = document.getElementById('external-sponsor-container');
-            if(sponsorBanner) {
-                sponsorBanner.style.display = show ? 'block' : 'none';
-            }
-        }
 
         async function updateCitySuggestions() {
             const stateVal = document.getElementById('state-input').value;
@@ -1023,13 +1017,11 @@
         function openAdminLogin() {
             document.getElementById('screen-register').classList.add('hidden');
             document.getElementById('screen-admin-login').classList.remove('hidden');
-            toggleSponsorVisibility(false);
         }
 
         function backToRegister() {
             document.getElementById('screen-admin-login').classList.add('hidden');
             document.getElementById('screen-register').classList.remove('hidden');
-            toggleSponsorVisibility(true);
         }
 
         function toggleSystemTurn() {
@@ -1042,7 +1034,6 @@
             if(pass === 'adm2026' || pass === '') {
                 document.getElementById('screen-admin-login').classList.add('hidden');
                 document.getElementById('screen-results').classList.remove('hidden');
-                toggleSponsorVisibility(false);
                 setupResultTabs();
             } else {
                 alert('Chave incorreta. Tente "adm2026".');
@@ -1063,7 +1054,6 @@
 
             document.getElementById('screen-register').classList.add('hidden');
             document.getElementById('screen-auth').classList.remove('hidden');
-            toggleSponsorVisibility(true);
         }
 
         function toggleDot(dotElement) {
@@ -1090,7 +1080,6 @@
 
             document.getElementById('screen-auth').classList.add('hidden');
             document.getElementById('screen-voting').classList.remove('hidden');
-            toggleSponsorVisibility(false);
 
             currentStep = 0;
             renderBallot();
@@ -1173,14 +1162,12 @@
             } else {
                 document.getElementById('screen-voting').classList.add('hidden');
                 document.getElementById('screen-success').classList.remove('hidden');
-                toggleSponsorVisibility(false);
             }
         }
 
         function goToResults() {
             document.getElementById('screen-success').classList.add('hidden');
             document.getElementById('screen-results').classList.remove('hidden');
-            toggleSponsorVisibility(false);
             setupResultTabs();
         }
 
@@ -1476,7 +1463,6 @@
         function openExportReport() {
             document.getElementById('screen-results').classList.add('hidden');
             document.getElementById('screen-export').classList.remove('hidden');
-            toggleSponsorVisibility(false);
 
             const stateVal = document.getElementById('filter-state-select').value;
             const cityVal = document.getElementById('filter-city-select').value;
@@ -1514,7 +1500,6 @@
         function backToResults() {
             document.getElementById('screen-export').classList.add('hidden');
             document.getElementById('screen-results').classList.remove('hidden');
-            toggleSponsorVisibility(false);
         }
 
         function downloadReportMock() {
@@ -1532,7 +1517,6 @@
             document.getElementById('screen-auth').classList.add('hidden');
             document.getElementById('screen-success').classList.add('hidden');
             document.getElementById('screen-register').classList.remove('hidden');
-            toggleSponsorVisibility(true);
         }
     </script>
 </body>
