@@ -18,55 +18,39 @@
             --highlight-yellow: #facc15;
         }
 
-        html, body {
-            height: 100vh;
-            width: 100vw;
-            margin: 0;
-            padding: 0;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            min-height: 100vh;
             box-sizing: border-box;
         }
 
-        /* Moldura do celular com ajuste 100% dinâmico e sem scroll interno */
+        /* Moldura responsiva que se adapta perfeitamente à tela do celular */
         .phone-frame {
             width: 100%;
-            max-width: 410px;
-            height: 100%;
-            max-height: 840px;
+            max-width: 400px;
             background-color: var(--card-bg);
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            box-sizing: border-box;
             border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
             border: 2px solid var(--border);
             overflow: hidden;
+            box-sizing: border-box;
         }
 
         .screen {
-            flex: 1;
+            padding: 12px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            padding: 8px 12px;
-            overflow: hidden;
+            gap: 8px;
             box-sizing: border-box;
-        }
-
-        .screen-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            overflow: hidden;
         }
 
         h1, h2, h3 {
@@ -78,7 +62,7 @@
             background: linear-gradient(135deg, rgba(15, 118, 110, 0.25) 0%, rgba(56, 189, 248, 0.15) 100%);
             border: 1px solid #38bdf8;
             border-radius: 6px;
-            padding: 4px;
+            padding: 6px;
         }
         .app-brand-header h1 {
             font-size: 0.95rem;
@@ -96,14 +80,14 @@
         }
 
         .header-title {
-            font-size: 0.78rem;
+            font-size: 0.8rem;
             font-weight: bold;
             color: var(--text-main);
             text-align: center;
         }
 
         .subtitle {
-            font-size: 0.5rem;
+            font-size: 0.52rem;
             color: var(--text-muted);
             text-align: center;
         }
@@ -112,7 +96,7 @@
             background-color: rgba(56, 189, 248, 0.1);
             border: 1px solid #38bdf8;
             border-radius: 4px;
-            padding: 3px 6px;
+            padding: 4px;
             text-align: center;
             font-size: 0.55rem;
             color: var(--highlight-yellow);
@@ -123,7 +107,7 @@
             background-color: rgba(15, 118, 110, 0.15);
             border: 1px solid #0f766e;
             border-radius: 4px;
-            padding: 3px 6px;
+            padding: 4px;
             text-align: center;
         }
         .tse-notice-box span {
@@ -140,24 +124,24 @@
         }
 
         .form-group {
-            margin-bottom: 3px;
+            margin-bottom: 4px;
         }
 
         label {
             display: block;
-            font-size: 0.52rem;
+            font-size: 0.55rem;
             color: var(--text-muted);
-            margin-bottom: 1px;
+            margin-bottom: 2px;
         }
 
         input, select {
             width: 100%;
-            padding: 4px 6px;
+            padding: 6px;
             background-color: #090d16;
             border: 1px solid var(--border);
             border-radius: 4px;
             color: var(--text-main);
-            font-size: 0.65rem;
+            font-size: 0.68rem;
             box-sizing: border-box;
         }
 
@@ -170,10 +154,11 @@
         .checkbox-group {
             display: flex;
             align-items: flex-start;
-            gap: 4px;
+            gap: 6px;
             font-size: 0.52rem;
             color: var(--text-main);
-            line-height: 1.1;
+            line-height: 1.2;
+            margin: 4px 0;
         }
 
         .checkbox-group input {
@@ -186,21 +171,21 @@
 
         button {
             width: 100%;
-            padding: 6px;
+            padding: 7px;
             background-color: #1e293b;
             color: white;
             border: 1px solid #475569;
             border-radius: 4px;
-            font-size: 0.65rem;
+            font-size: 0.68rem;
             font-weight: bold;
             cursor: pointer;
+            margin-top: 4px;
         }
 
-        /* Distribuição 100% dinâmica dos candidatos sem rolagens */
         #candidates-container {
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 5px;
         }
 
         .candidate-card {
@@ -220,8 +205,8 @@
         }
 
         .candidate-img {
-            width: 30px;
-            height: 30px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             object-fit: cover;
             margin-right: 8px;
@@ -230,7 +215,7 @@
 
         .candidate-info h4 {
             margin: 0 0 1px 0;
-            font-size: 0.68rem;
+            font-size: 0.7rem;
         }
 
         .candidate-info p {
@@ -243,6 +228,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 4px;
+            margin-top: 4px;
         }
 
         .special-vote-btn {
@@ -262,13 +248,13 @@
             color: #10b981;
         }
 
-        /* Padrão de pontos ajustado para encaixar perfeitamente */
+        /* Padrão de pontos ajustado */
         .pattern-lock-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
+            gap: 14px;
             width: 170px;
-            margin: 8px auto;
+            margin: 10px auto;
             padding: 10px;
             background-color: #090d16;
             border: 1px solid var(--border);
@@ -277,8 +263,8 @@
             align-items: center;
         }
         .pattern-dot {
-            width: 26px;
-            height: 26px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             background-color: #334155;
             border: 2px solid var(--border);
@@ -297,7 +283,7 @@
 
         .success-box {
             text-align: center;
-            padding: 10px 4px;
+            padding: 12px 6px;
         }
 
         .success-icon {
@@ -312,7 +298,7 @@
             color: #94a3b8;
             padding: 2px 6px;
             border-radius: 10px;
-            font-size: 0.5rem;
+            font-size: 0.52rem;
             font-weight: bold;
             text-transform: uppercase;
         }
@@ -349,7 +335,7 @@
 
         .filter-box {
             background-color: #090d16;
-            padding: 5px 6px;
+            padding: 6px;
             border-radius: 4px;
             border: 1px solid var(--border);
             font-size: 0.55rem;
@@ -359,14 +345,14 @@
             display: flex;
             flex-wrap: wrap;
             gap: 3px;
-            margin-top: 2px;
+            margin-top: 3px;
         }
         .sub-filter-btn {
             padding: 3px 5px;
             background: #1e293b;
             border: 1px solid var(--border);
             color: var(--text-muted);
-            font-size: 0.5rem;
+            font-size: 0.52rem;
             border-radius: 3px;
             cursor: pointer;
         }
@@ -377,9 +363,9 @@
         }
 
         .section-divider {
-            margin: 2px 0;
+            margin: 3px 0;
             border-top: 1px dashed var(--border);
-            padding-top: 2px;
+            padding-top: 3px;
             font-size: 0.48rem;
             font-weight: bold;
             color: #38bdf8;
@@ -411,7 +397,7 @@
         }
 
         .result-bar-container {
-            margin-bottom: 2px;
+            margin-bottom: 3px;
         }
 
         .result-meta {
@@ -440,7 +426,7 @@
             background-color: #090d16;
             border: 1px solid var(--border);
             border-radius: 4px;
-            padding: 4px;
+            padding: 5px;
             text-align: center;
         }
         .admin-stat-card h3 {
@@ -460,7 +446,7 @@
             border-radius: 4px;
             padding: 6px;
             font-size: 0.55rem;
-            max-height: 130px;
+            max-height: 140px;
             overflow-y: auto;
             text-align: left;
         }
@@ -473,20 +459,18 @@
         .report-preview-box hr {
             border: 0;
             border-top: 1px solid #cbd5e1;
-            margin: 2px 0;
+            margin: 3px 0;
         }
 
-        /* Banner de patrocínio externo visível apenas nas 2 primeiras telas */
+        /* Banner de patrocínio externo visível APENAS nas telas 1 e 2 */
         .external-sponsor-banner {
             width: 100%;
-            max-width: 410px;
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border: 1px dashed #475569;
-            border-radius: 6px;
+            border-top: 1px dashed #475569;
             padding: 6px 10px;
             text-align: center;
-            margin-top: 4px;
             box-sizing: border-box;
+            margin-top: 6px;
         }
         .external-sponsor-banner span {
             font-size: 0.42rem;
@@ -509,325 +493,323 @@
     <div class="phone-frame">
         <div class="screen" id="app-screen">
             
-            <div class="screen-content">
-                <div class="app-brand-header">
-                    <h1>Pesquisa Justa</h1>
-                    <p>Sistema de Opinião Pública & Eleitoral</p>
+            <div class="app-brand-header">
+                <h1>Pesquisa Justa</h1>
+                <p>Sistema de Opinião Pública & Eleitoral</p>
+            </div>
+
+            <div class="status-banner" id="status-banner-text">
+                🗳️ Pesquisa Eleitoral Oficial (1º Turno)
+            </div>
+
+            <div class="tse-notice-box">
+                <span>📜 CONFORMIDADE ELEITORAL & REGISTRO TSE</span>
+                <p>Protocolo PesqEle: BR-02849/2026 | Resolução TSE nº 23.600/2019</p>
+            </div>
+
+            <!-- TELA 1: CADASTRO DEMOGRÁFICO DO ELEITOR -->
+            <div id="screen-register" class="view">
+                <div style="text-align: center;">
+                    <h1 class="header-title">Perfil Demográfico</h1>
+                    <p class="subtitle">Dados obrigatórios para ponderação estatística oficial (IBGE / TSE).</p>
+                </div>
+                
+                <div class="form-group">
+                    <label>WhatsApp (com DDD)</label>
+                    <input type="text" id="whatsapp-input" placeholder="(11) 99999-9999">
                 </div>
 
-                <div class="status-banner" id="status-banner-text">
-                    🗳️ Pesquisa Eleitoral Oficial (1º Turno)
+                <div style="display: flex; gap: 6px;">
+                    <div class="form-group" style="flex: 1;">
+                        <label>Estado / Países</label>
+                        <select id="state-input" onchange="updateCitySuggestions()">
+                            <option value="">Selecione UF</option>
+                            <option value="AC">Acre - AC</option>
+                            <option value="AL">Alagoas - AL</option>
+                            <option value="AP">Amapá - AP</option>
+                            <option value="AM">Amazonas - AM</option>
+                            <option value="BA">Bahia - BA</option>
+                            <option value="CE">Ceará - CE</option>
+                            <option value="DF">Distrito Federal - DF</option>
+                            <option value="ES">Espírito Santo - ES</option>
+                            <option value="GO">Goiás - GO</option>
+                            <option value="MA">Maranhão - MA</option>
+                            <option value="MT">Mato Grosso - MT</option>
+                            <option value="MS">Mato Grosso do Sul - MS</option>
+                            <option value="MG">Minas Gerais - MG</option>
+                            <option value="PA">Pará - PA</option>
+                            <option value="PB">Paraíba - PB</option>
+                            <option value="PR">Paraná - PR</option>
+                            <option value="PE">Pernambuco - PE</option>
+                            <option value="PI">Piauí - PI</option>
+                            <option value="RJ">Rio de Janeiro - RJ</option>
+                            <option value="RN">Rio Grande do Norte - RN</option>
+                            <option value="RS">Rio Grande do Sul - RS</option>
+                            <option value="RO">Rondônia - RO</option>
+                            <option value="RR">Roraima - RR</option>
+                            <option value="SC">Santa Catarina - SC</option>
+                            <option value="SP">São Paulo - SP</option>
+                            <option value="SE">Sergipe - SE</option>
+                            <option value="TO">Tocantins - TO</option>
+                            <option value="ZZ">🌎 Outros Países (Exterior)</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="flex: 1.5;">
+                        <label id="city-label-text">Município / Capital</label>
+                        <select id="city-input">
+                            <option value="">Selecione o Estado...</option>
+                        </select>
+                    </div>
                 </div>
 
-                <div class="tse-notice-box">
-                    <span>📜 CONFORMIDADE ELEITORAL & REGISTRO TSE</span>
-                    <p>Protocolo PesqEle: BR-02849/2026 | Resolução TSE nº 23.600/2019</p>
+                <div style="display: flex; gap: 6px;">
+                    <div class="form-group" style="flex: 1;">
+                        <label>Zona / Região</label>
+                        <select id="zone-input">
+                            <option value="">Selecione...</option>
+                            <option value="Zona Norte">Zona Norte</option>
+                            <option value="Zona Sul">Zona Sul</option>
+                            <option value="Zona Leste">Zona Leste</option>
+                            <option value="Zona Oeste">Zona Oeste</option>
+                            <option value="Zona Centro-Oeste">Zona Centro-Oeste</option>
+                            <option value="Zona Centro-Sul">Zona Centro-Sul</option>
+                            <option value="Zona Central / Centro">Zona Central</option>
+                            <option value="Zona Urbana">Zona Urbana</option>
+                            <option value="Zona Rural / Distritos">Zona Rural</option>
+                            <option value="Seção Consular / Exterior">Exterior</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label>Renda Familiar</label>
+                        <select id="income-input">
+                            <option value="">Salários Mínimos</option>
+                            <option value="1">Até 1 S.M.</option>
+                            <option value="3">1 a 3 S.M.</option>
+                            <option value="5">3 a 5 S.M.</option>
+                            <option value="10">5 a 10 S.M.</option>
+                            <option value="11">Acima de 10 S.M.</option>
+                        </select>
+                    </div>
                 </div>
 
-                <!-- TELA 1: CADASTRO DEMOGRÁFICO DO ELEITOR -->
-                <div id="screen-register" class="view">
-                    <div style="text-align: center;">
-                        <h1 class="header-title">Perfil Demográfico</h1>
-                        <p class="subtitle">Dados obrigatórios para ponderação estatística oficial (IBGE / TSE).</p>
+                <div style="display: flex; gap: 6px;">
+                    <div class="form-group" style="flex: 1;">
+                        <label>Gênero</label>
+                        <select id="gender-input">
+                            <option value="">Selecione</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="LGBTQIA+">LGBTQIA+</option>
+                            <option value="Outro">Outro</option>
+                        </select>
                     </div>
-                    
-                    <div class="form-group">
-                        <label>WhatsApp (com DDD)</label>
-                        <input type="text" id="whatsapp-input" placeholder="(11) 99999-9999">
+                    <div class="form-group" style="flex: 1;">
+                        <label>Cor / Raça (IBGE)</label>
+                        <select id="race-input">
+                            <option value="">Selecione</option>
+                            <option value="Branca">Branca</option>
+                            <option value="Preta">Preta</option>
+                            <option value="Parda">Parda</option>
+                            <option value="Amarela">Amarela</option>
+                            <option value="Indígena">Indígena</option>
+                        </select>
                     </div>
-
-                    <div style="display: flex; gap: 4px;">
-                        <div class="form-group" style="flex: 1;">
-                            <label>Estado / Países</label>
-                            <select id="state-input" onchange="updateCitySuggestions()">
-                                <option value="">Selecione UF</option>
-                                <option value="AC">Acre - AC</option>
-                                <option value="AL">Alagoas - AL</option>
-                                <option value="AP">Amapá - AP</option>
-                                <option value="AM">Amazonas - AM</option>
-                                <option value="BA">Bahia - BA</option>
-                                <option value="CE">Ceará - CE</option>
-                                <option value="DF">Distrito Federal - DF</option>
-                                <option value="ES">Espírito Santo - ES</option>
-                                <option value="GO">Goiás - GO</option>
-                                <option value="MA">Maranhão - MA</option>
-                                <option value="MT">Mato Grosso - MT</option>
-                                <option value="MS">Mato Grosso do Sul - MS</option>
-                                <option value="MG">Minas Gerais - MG</option>
-                                <option value="PA">Pará - PA</option>
-                                <option value="PB">Paraíba - PB</option>
-                                <option value="PR">Paraná - PR</option>
-                                <option value="PE">Pernambuco - PE</option>
-                                <option value="PI">Piauí - PI</option>
-                                <option value="RJ">Rio de Janeiro - RJ</option>
-                                <option value="RN">Rio Grande do Norte - RN</option>
-                                <option value="RS">Rio Grande do Sul - RS</option>
-                                <option value="RO">Rondônia - RO</option>
-                                <option value="RR">Roraima - RR</option>
-                                <option value="SC">Santa Catarina - SC</option>
-                                <option value="SP">São Paulo - SP</option>
-                                <option value="SE">Sergipe - SE</option>
-                                <option value="TO">Tocantins - TO</option>
-                                <option value="ZZ">🌎 Outros Países (Exterior)</option>
-                            </select>
-                        </div>
-                        <div class="form-group" style="flex: 1.5;">
-                            <label id="city-label-text">Município / Capital</label>
-                            <select id="city-input">
-                                <option value="">Selecione o Estado...</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; gap: 4px;">
-                        <div class="form-group" style="flex: 1;">
-                            <label>Zona / Região</label>
-                            <select id="zone-input">
-                                <option value="">Selecione...</option>
-                                <option value="Zona Norte">Zona Norte</option>
-                                <option value="Zona Sul">Zona Sul</option>
-                                <option value="Zona Leste">Zona Leste</option>
-                                <option value="Zona Oeste">Zona Oeste</option>
-                                <option value="Zona Centro-Oeste">Zona Centro-Oeste</option>
-                                <option value="Zona Centro-Sul">Zona Centro-Sul</option>
-                                <option value="Zona Central / Centro">Zona Central</option>
-                                <option value="Zona Urbana">Zona Urbana</option>
-                                <option value="Zona Rural / Distritos">Zona Rural</option>
-                                <option value="Seção Consular / Exterior">Exterior</option>
-                            </select>
-                        </div>
-                        <div class="form-group" style="flex: 1;">
-                            <label>Renda Familiar</label>
-                            <select id="income-input">
-                                <option value="">Salários Mínimos</option>
-                                <option value="1">Até 1 S.M.</option>
-                                <option value="3">1 a 3 S.M.</option>
-                                <option value="5">3 a 5 S.M.</option>
-                                <option value="10">5 a 10 S.M.</option>
-                                <option value="11">Acima de 10 S.M.</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; gap: 4px;">
-                        <div class="form-group" style="flex: 1;">
-                            <label>Gênero</label>
-                            <select id="gender-input">
-                                <option value="">Selecione</option>
-                                <option value="Masculino">Masculino</option>
-                                <option value="Feminino">Feminino</option>
-                                <option value="LGBTQIA+">LGBTQIA+</option>
-                                <option value="Outro">Outro</option>
-                            </select>
-                        </div>
-                        <div class="form-group" style="flex: 1;">
-                            <label>Cor / Raça (IBGE)</label>
-                            <select id="race-input">
-                                <option value="">Selecione</option>
-                                <option value="Branca">Branca</option>
-                                <option value="Preta">Preta</option>
-                                <option value="Parda">Parda</option>
-                                <option value="Amarela">Amarela</option>
-                                <option value="Indígena">Indígena</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="lgpd-check">
-                        <label for="lgpd-check" style="color: var(--text-main); font-size: 0.5rem; cursor: pointer;">Autorizo o uso destes dados para fins estatísticos e anonimização conforme LGPD e TSE.</label>
-                    </div>
-
-                    <button onclick="goToAuth()">Prosseguir para Autenticação</button>
-                    
-                    <button onclick="openAdminLogin()" style="background-color: #090d16; border: 1px dashed var(--border); color: var(--text-muted); font-size: 0.52rem;">🔒 Acesso Restrito (Gestor / ADM)</button>
                 </div>
 
-                <!-- TELA 1.1: LOGIN DO ADMINISTRADOR -->
-                <div id="screen-admin-login" class="view hidden">
-                    <div style="text-align: center;">
-                        <span class="badge" style="background-color: rgba(56, 189, 248, 0.2); color: #38bdf8;">Painel de Controle</span>
-                        <h1 class="header-title">Autenticação do Gestor</h1>
-                        <p class="subtitle">Insira a chave mestra do sistema para acessar a retaguarda analítica.</p>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="lgpd-check">
+                    <label for="lgpd-check" style="color: var(--text-main); font-size: 0.55rem; cursor: pointer;">Autorizo o uso destes dados para fins estatísticos e anonimização conforme LGPD e TSE.</label>
+                </div>
+
+                <button onclick="goToAuth()">Prosseguir para Autenticação</button>
+                
+                <button onclick="openAdminLogin()" style="background-color: #090d16; border: 1px dashed var(--border); color: var(--text-muted); font-size: 0.55rem;">🔒 Acesso Restrito (Gestor / ADM)</button>
+            </div>
+
+            <!-- TELA 1.1: LOGIN DO ADMINISTRADOR -->
+            <div id="screen-admin-login" class="view hidden">
+                <div style="text-align: center;">
+                    <span class="badge" style="background-color: rgba(56, 189, 248, 0.2); color: #38bdf8;">Painel de Controle</span>
+                    <h1 class="header-title">Autenticação do Gestor</h1>
+                    <p class="subtitle">Insira a chave mestra do sistema para acessar a retaguarda analítica.</p>
+                </div>
+
+                <div class="form-group">
+                    <label>Configurar Turno Ativo do Sistema</label>
+                    <select id="admin-turn-toggle" onchange="toggleSystemTurn()">
+                        <option value="1">1º Turno (Fase Inicial)</option>
+                        <option value="2">2º Turno (Fase Final / Desempate)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Chave de Acesso ADM</label>
+                    <input type="password" id="admin-pass-input" placeholder="Digite a senha (ex: adm2026)">
+                </div>
+                <button onclick="validateAdminLogin()" style="background-color: var(--accent); border-color: #14b8a6;">Entrar no Painel Macro</button>
+                <button onclick="backToRegister()" style="background-color: #334155;">Voltar ao Início</button>
+            </div>
+
+            <!-- TELA 2: AUTENTICAÇÃO POR PADRÃO DE PONTOS / BIOMETRIA -->
+            <div id="screen-auth" class="view hidden">
+                <div style="text-align: center;">
+                    <span class="badge">Segurança & Acesso</span>
+                    <h1 class="header-title">Validação por Padrão de Pontos</h1>
+                    <p class="subtitle">Desenhe seu padrão de segurança ou use a biometria para confirmar acesso.</p>
+                </div>
+
+                <div class="pattern-lock-container" id="pattern-grid">
+                    <div class="pattern-dot" data-id="1" onclick="toggleDot(this)"></div>
+                    <div class="pattern-dot" data-id="2" onclick="toggleDot(this)"></div>
+                    <div class="pattern-dot" data-id="3" onclick="toggleDot(this)"></div>
+                    <div class="pattern-dot" data-id="4" onclick="toggleDot(this)"></div>
+                    <div class="pattern-dot" data-id="5" onclick="toggleDot(this)"></div>
+                    <div class="pattern-dot" data-id="6" onclick="toggleDot(this)"></div>
+                    <div class="pattern-dot" data-id="7" onclick="toggleDot(this)"></div>
+                    <div class="pattern-dot" data-id="8" onclick="toggleDot(this)"></div>
+                    <div class="pattern-dot" data-id="9" onclick="toggleDot(this)"></div>
+                </div>
+
+                <p style="text-align: center; font-size: 0.52rem; color: var(--text-muted); margin: 0;">Toque em pelo menos 3 pontos para criar seu padrão ou clique em biometria.</p>
+
+                <button onclick="startVoting()" style="background-color: #0f766e; border-color: #14b8a6;">Confirmar Padrão e Acessar Urna</button>
+                <button onclick="simulateBiometric()" style="background-color: #334155;">👆 Usar Biometria Facial / Digital</button>
+            </div>
+
+            <!-- TELA 3: CÉDULA DE VOTAÇÃO -->
+            <div id="screen-voting" class="view hidden">
+                <div style="text-align: center;">
+                    <span class="badge" id="voting-badge">Etapa 1 de X</span>
+                    <h2 id="voting-title" style="font-size: 0.85rem;">Cargo</h2>
+                    <p class="subtitle" id="voting-subtitle">Selecione 1 opção</p>
+                </div>
+
+                <div id="candidates-container"></div>
+
+                <div class="special-votes-wrapper">
+                    <div class="special-vote-btn" onclick="handleSpecialVote('Votos Brancos')">Branco</div>
+                    <div class="special-vote-btn" onclick="handleSpecialVote('Votos Nulos')">Nulo</div>
+                    <div class="special-vote-btn" onclick="handleSpecialVote('Indecisos / Não Sabe')">Indeciso</div>
+                </div>
+
+                <button id="btn-next-vote" onclick="nextVotingStep()" style="background-color: #0f766e; border-color: #14b8a6;" disabled>Confirmar e Avançar</button>
+            </div>
+
+            <!-- TELA 4: SUCESSO E BLOQUEIO -->
+            <div id="screen-success" class="view hidden success-box">
+                <div class="success-icon">🛡️</div>
+                <h2 style="color: #10b981; font-size: 0.85rem;">Voto Computado e Anonimizado</h2>
+                <p class="subtitle">Seu voto foi segregado em urna cega. O histórico foi apagado deste dispositivo.</p>
+                <div style="background-color: #090d16; padding: 6px; border-radius: 4px; border: 1px solid var(--border);">
+                    <p style="font-size: 0.55rem; margin: 0; color: var(--text-muted);">Status: <strong style="color: var(--text-main);">Acesso encerrado para esta consulta.</strong></p>
+                </div>
+                <button onclick="goToResults()">Consultar Resultados e Ficha TSE</button>
+            </div>
+
+            <!-- TELA 5: RESULTADOS / PAINEL ANALÍTICO ADM -->
+            <div id="screen-results" class="view hidden">
+                <div style="display: flex; gap: 6px;">
+                    <div class="admin-stat-card" style="flex: 1;">
+                        <h3 id="stat-total-votes">4.500</h3>
+                        <p>Amostra Consolidada</p>
+                    </div>
+                    <div class="admin-stat-card" style="flex: 1;">
+                        <h3 style="color: #10b981;">99.8%</h3>
+                        <p>Integridade Blindada</p>
+                    </div>
+                </div>
+
+                <div class="result-tabs" id="result-tabs-container"></div>
+
+                <!-- FILTROS GEOGRÁFICOS DINÂMICOS -->
+                <div class="filter-box">
+                    <div style="display: flex; gap: 6px; margin-bottom: 3px;">
+                        <label style="flex: 1; font-size: 0.55rem; color: var(--text-muted); font-weight: bold;">Estado / Países:</label>
+                        <label id="filter-second-label" style="flex: 1; font-size: 0.55rem; color: var(--text-muted); font-weight: bold;">Município / Países:</label>
                     </div>
 
-                    <div class="form-group">
-                        <label>Configurar Turno Ativo do Sistema</label>
-                        <select id="admin-turn-toggle" onchange="toggleSystemTurn()">
-                            <option value="1">1º Turno (Fase Inicial)</option>
-                            <option value="2">2º Turno (Fase Final / Desempate)</option>
+                    <div style="display: flex; gap: 6px; margin-bottom: 4px;" id="geographic-selectors-wrapper">
+                        <select id="filter-state-select" onchange="onStateFilterChange()" style="flex: 1; font-size: 0.55rem; padding: 4px;">
+                            <option value="AM">Amazonas - AM</option>
+                            <option value="AC">Acre - AC</option>
+                            <option value="AL">Alagoas - AL</option>
+                            <option value="AP">Amapá - AP</option>
+                            <option value="BA">Bahia - BA</option>
+                            <option value="CE">Ceará - CE</option>
+                            <option value="DF">Distrito Federal - DF</option>
+                            <option value="ES">Espírito Santo - ES</option>
+                            <option value="GO">Goiás - GO</option>
+                            <option value="MA">Maranhão - MA</option>
+                            <option value="MT">Mato Grosso - MT</option>
+                            <option value="MS">Mato Grosso do Sul - MS</option>
+                            <option value="MG">Minas Gerais - MG</option>
+                            <option value="PA">Pará - PA</option>
+                            <option value="PB">Paraíba - PB</option>
+                            <option value="PR">Paraná - PR</option>
+                            <option value="PE">Pernambuco - PE</option>
+                            <option value="PI">Piauí - PI</option>
+                            <option value="RJ">Rio de Janeiro - RJ</option>
+                            <option value="RN">Rio Grande do Norte - RN</option>
+                            <option value="RS">Rio Grande do Sul - RS</option>
+                            <option value="RO">Rondônia - RO</option>
+                            <option value="RR">Roraima - RR</option>
+                            <option value="SC">Santa Catarina - SC</option>
+                            <option value="SP">São Paulo - SP</option>
+                            <option value="SE">Sergipe - SE</option>
+                            <option value="TO">Tocantins - TO</option>
+                            <option value="ZZ">🌎 Outros Países (Exterior)</option>
+                        </select>
+                        
+                        <select id="filter-city-select" onchange="onCityFilterChange()" style="flex: 1; font-size: 0.55rem; padding: 4px;">
+                            <option value="Todas as Cidades">🏙️ Todas as Cidades</option>
                         </select>
                     </div>
 
-                    <div class="form-group">
-                        <label>Chave de Acesso ADM</label>
-                        <input type="password" id="admin-pass-input" placeholder="Digite a senha (ex: adm2026)">
-                    </div>
-                    <button onclick="validateAdminLogin()" style="background-color: var(--accent); border-color: #14b8a6;">Entrar no Painel Macro</button>
-                    <button onclick="backToRegister()" style="background-color: #334155;">Voltar ao Início</button>
+                    <label id="macro-label" style="margin-bottom: 2px; color: var(--text-main); font-weight: bold; font-size: 0.55rem;">Recorte Geográfico:</label>
+                    <div id="macro-filters-container" class="sub-filters" style="margin-bottom: 3px;"></div>
+                    <div id="section-divider-elem" class="section-divider">📍 Zonas da Cidade Selecionada</div>
+                    <div id="micro-filters-container" class="sub-filters"></div>
                 </div>
 
-                <!-- TELA 2: AUTENTICAÇÃO POR PADRÃO DE PONTOS / BIOMETRIA -->
-                <div id="screen-auth" class="view hidden">
-                    <div style="text-align: center;">
-                        <span class="badge">Segurança & Acesso</span>
-                        <h1 class="header-title">Validação por Padrão de Pontos</h1>
-                        <p class="subtitle">Desenhe seu padrão de segurança ou use a biometria para confirmar acesso.</p>
-                    </div>
-
-                    <div class="pattern-lock-container" id="pattern-grid">
-                        <div class="pattern-dot" data-id="1" onclick="toggleDot(this)"></div>
-                        <div class="pattern-dot" data-id="2" onclick="toggleDot(this)"></div>
-                        <div class="pattern-dot" data-id="3" onclick="toggleDot(this)"></div>
-                        <div class="pattern-dot" data-id="4" onclick="toggleDot(this)"></div>
-                        <div class="pattern-dot" data-id="5" onclick="toggleDot(this)"></div>
-                        <div class="pattern-dot" data-id="6" onclick="toggleDot(this)"></div>
-                        <div class="pattern-dot" data-id="7" onclick="toggleDot(this)"></div>
-                        <div class="pattern-dot" data-id="8" onclick="toggleDot(this)"></div>
-                        <div class="pattern-dot" data-id="9" onclick="toggleDot(this)"></div>
-                    </div>
-
-                    <p style="text-align: center; font-size: 0.5rem; color: var(--text-muted); margin: 0;">Toque em pelo menos 3 pontos para criar seu padrão ou clique em biometria.</p>
-
-                    <button onclick="startVoting()" style="background-color: #0f766e; border-color: #14b8a6;">Confirmar Padrão e Acessar Urna</button>
-                    <button onclick="simulateBiometric()" style="background-color: #334155;">👆 Usar Biometria Facial / Digital</button>
+                <div class="mode-toggle">
+                    <button class="mode-btn active" id="btn-mode-geral" onclick="setCalculationMode('geral')">Intenção Geral (Amostra)</button>
+                    <button class="mode-btn" id="btn-mode-validos" onclick="setCalculationMode('validos')">Votos Válidos (100% expurgado)</button>
                 </div>
 
-                <!-- TELA 3: CÉDULA DE VOTAÇÃO -->
-                <div id="screen-voting" class="view hidden">
-                    <div style="text-align: center;">
-                        <span class="badge" id="voting-badge">Etapa 1 de X</span>
-                        <h2 id="voting-title" style="font-size: 0.8rem;">Cargo</h2>
-                        <p class="subtitle" id="voting-subtitle">Selecione 1 opção</p>
-                    </div>
+                <div id="results-content-container"></div>
 
-                    <div id="candidates-container"></div>
+                <button onclick="openExportReport()" style="background-color: #0f766e; border-color: #14b8a6; font-size: 0.6rem;">📄 Gerar Relatório Oficial (Imprensa / PDF)</button>
 
-                    <div class="special-votes-wrapper">
-                        <div class="special-vote-btn" onclick="handleSpecialVote('Votos Brancos')">Branco</div>
-                        <div class="special-vote-btn" onclick="handleSpecialVote('Votos Nulos')">Nulo</div>
-                        <div class="special-vote-btn" onclick="handleSpecialVote('Indecisos / Não Sabe')">Indeciso</div>
-                    </div>
-
-                    <button id="btn-next-vote" onclick="nextVotingStep()" style="background-color: #0f766e; border-color: #14b8a6;" disabled>Confirmar e Avançar</button>
+                <div style="background-color: #090d16; padding: 6px; border-radius: 4px; border: 1px solid var(--border); font-size: 0.55rem; color: var(--text-muted); line-height: 1.2;">
+                    <strong style="color: var(--text-main); display: block; margin-bottom: 1px;">Compliance (TSE):</strong>
+                    • Protocolo PesqEle: BR-02849/2026 | Amostra: 4.500 Ponderados | Margem: ± 1.5%
                 </div>
 
-                <!-- TELA 4: SUCESSO E BLOQUEIO -->
-                <div id="screen-success" class="view hidden success-box">
-                    <div class="success-icon">🛡️</div>
-                    <h2 style="color: #10b981; font-size: 0.82rem;">Voto Computado e Anonimizado</h2>
-                    <p class="subtitle">Seu voto foi segregado em urna cega. O histórico foi apagado deste dispositivo.</p>
-                    <div style="background-color: #090d16; padding: 6px; border-radius: 4px; border: 1px solid var(--border);">
-                        <p style="font-size: 0.52rem; margin: 0; color: var(--text-muted);">Status: <strong style="color: var(--text-main);">Acesso encerrado para esta consulta.</strong></p>
-                    </div>
-                    <button onclick="goToResults()">Consultar Resultados e Ficha TSE</button>
+                <button onclick="resetApp()" style="padding: 6px; background-color: #334155; font-size: 0.55rem;">Sair / Reiniciar Teste</button>
+            </div>
+
+            <!-- TELA 6: EXPORTAÇÃO DE RELATÓRIO -->
+            <div id="screen-export" class="view hidden">
+                <div style="text-align: center;">
+                    <span class="badge" style="background-color: rgba(16, 185, 129, 0.2); color: #10b981;">Documento Executivo</span>
+                    <h2 style="font-size: 0.85rem; margin-bottom: 2px;">Relatório Oficial para Imprensa</h2>
+                    <p class="subtitle">Pronto para distribuição institucional, jurídica e partidária.</p>
                 </div>
 
-                <!-- TELA 5: RESULTADOS / PAINEL ANALÍTICO ADM -->
-                <div id="screen-results" class="view hidden">
-                    <div style="display: flex; gap: 4px;">
-                        <div class="admin-stat-card" style="flex: 1;">
-                            <h3 id="stat-total-votes">4.500</h3>
-                            <p>Amostra Consolidada</p>
-                        </div>
-                        <div class="admin-stat-card" style="flex: 1;">
-                            <h3 style="color: #10b981;">99.8%</h3>
-                            <p>Integridade Blindada</p>
-                        </div>
-                    </div>
+                <div class="report-preview-box" id="report-content-box"></div>
 
-                    <div class="result-tabs" id="result-tabs-container"></div>
+                <button onclick="copyReportText()" style="background-color: #2563eb; border-color: #3b82f6; font-size: 0.6rem;">📋 Copiar Relatório Completo</button>
+                <button onclick="downloadReportMock()" style="background-color: #0f766e; border-color: #14b8a6; font-size: 0.6rem;">💾 Salvar Arquivo (PDF)</button>
+                <button onclick="backToResults()" style="background-color: #334155; font-size: 0.6rem;">Voltar ao Painel Analítico</button>
+            </div>
 
-                    <!-- FILTROS GEOGRÁFICOS DINÂMICOS -->
-                    <div class="filter-box">
-                        <div style="display: flex; gap: 4px; margin-bottom: 2px;">
-                            <label style="flex: 1; font-size: 0.52rem; color: var(--text-muted); font-weight: bold;">Estado / Países:</label>
-                            <label id="filter-second-label" style="flex: 1; font-size: 0.52rem; color: var(--text-muted); font-weight: bold;">Município / Países:</label>
-                        </div>
-
-                        <div style="display: flex; gap: 4px; margin-bottom: 3px;" id="geographic-selectors-wrapper">
-                            <select id="filter-state-select" onchange="onStateFilterChange()" style="flex: 1; font-size: 0.52rem; padding: 3px;">
-                                <option value="AM">Amazonas - AM</option>
-                                <option value="AC">Acre - AC</option>
-                                <option value="AL">Alagoas - AL</option>
-                                <option value="AP">Amapá - AP</option>
-                                <option value="BA">Bahia - BA</option>
-                                <option value="CE">Ceará - CE</option>
-                                <option value="DF">Distrito Federal - DF</option>
-                                <option value="ES">Espírito Santo - ES</option>
-                                <option value="GO">Goiás - GO</option>
-                                <option value="MA">Maranhão - MA</option>
-                                <option value="MT">Mato Grosso - MT</option>
-                                <option value="MS">Mato Grosso do Sul - MS</option>
-                                <option value="MG">Minas Gerais - MG</option>
-                                <option value="PA">Pará - PA</option>
-                                <option value="PB">Paraíba - PB</option>
-                                <option value="PR">Paraná - PR</option>
-                                <option value="PE">Pernambuco - PE</option>
-                                <option value="PI">Piauí - PI</option>
-                                <option value="RJ">Rio de Janeiro - RJ</option>
-                                <option value="RN">Rio Grande do Norte - RN</option>
-                                <option value="RS">Rio Grande do Sul - RS</option>
-                                <option value="RO">Rondônia - RO</option>
-                                <option value="RR">Roraima - RR</option>
-                                <option value="SC">Santa Catarina - SC</option>
-                                <option value="SP">São Paulo - SP</option>
-                                <option value="SE">Sergipe - SE</option>
-                                <option value="TO">Tocantins - TO</option>
-                                <option value="ZZ">🌎 Outros Países (Exterior)</option>
-                            </select>
-                            
-                            <select id="filter-city-select" onchange="onCityFilterChange()" style="flex: 1; font-size: 0.52rem; padding: 3px;">
-                                <option value="Todas as Cidades">🏙️ Todas as Cidades</option>
-                            </select>
-                        </div>
-
-                        <label id="macro-label" style="margin-bottom: 2px; color: var(--text-main); font-weight: bold; font-size: 0.52rem;">Recorte Geográfico:</label>
-                        <div id="macro-filters-container" class="sub-filters" style="margin-bottom: 2px;"></div>
-                        <div id="section-divider-elem" class="section-divider">📍 Zonas da Cidade Selecionada</div>
-                        <div id="micro-filters-container" class="sub-filters"></div>
-                    </div>
-
-                    <div class="mode-toggle">
-                        <button class="mode-btn active" id="btn-mode-geral" onclick="setCalculationMode('geral')">Intenção Geral (Amostra)</button>
-                        <button class="mode-btn" id="btn-mode-validos" onclick="setCalculationMode('validos')">Votos Válidos (100% expurgado)</button>
-                    </div>
-
-                    <div id="results-content-container"></div>
-
-                    <button onclick="openExportReport()" style="background-color: #0f766e; border-color: #14b8a6; font-size: 0.58rem;">📄 Gerar Relatório Oficial (Imprensa / PDF)</button>
-
-                    <div style="background-color: #090d16; padding: 4px; border-radius: 4px; border: 1px solid var(--border); font-size: 0.52rem; color: var(--text-muted); line-height: 1.1;">
-                        <strong style="color: var(--text-main); display: block; margin-bottom: 1px;">Compliance (TSE):</strong>
-                        • Protocolo PesqEle: BR-02849/2026 | Amostra: 4.500 Ponderados | Margem: ± 1.5%
-                    </div>
-
-                    <button onclick="resetApp()" style="padding: 4px; background-color: #334155; font-size: 0.52rem;">Sair / Reiniciar Teste</button>
-                </div>
-
-                <!-- TELA 6: EXPORTAÇÃO DE RELATÓRIO -->
-                <div id="screen-export" class="view hidden">
-                    <div style="text-align: center;">
-                        <span class="badge" style="background-color: rgba(16, 185, 129, 0.2); color: #10b981;">Documento Executivo</span>
-                        <h2 style="font-size: 0.8rem; margin-bottom: 1px;">Relatório Oficial para Imprensa</h2>
-                        <p class="subtitle">Pronto para distribuição institucional, jurídica e partidária.</p>
-                    </div>
-
-                    <div class="report-preview-box" id="report-content-box"></div>
-
-                    <button onclick="copyReportText()" style="background-color: #2563eb; border-color: #3b82f6; font-size: 0.58rem;">📋 Copiar Relatório Completo</button>
-                    <button onclick="downloadReportMock()" style="background-color: #0f766e; border-color: #14b8a6; font-size: 0.58rem;">💾 Descarregar / Salvar (PDF)</button>
-                    <button onclick="backToResults()" style="background-color: #334155; font-size: 0.58rem;">Voltar ao Painel Analítico</button>
-                </div>
+            <!-- BANNER DE PATROCÍNIO EXTERNO INTEGRADO (Visível APENAS nas telas 1 e 2) -->
+            <div class="external-sponsor-banner" id="external-sponsor-container">
+                <span>Patrocínio Institucional / Comercial</span>
+                <p>🏢 Anúncio Comercial Genérico ou Apoio Tecnológico 2026</p>
             </div>
 
         </div>
-    </div>
-
-    <!-- BANNER DE PATROCÍNIO EXTERNO (Visível APENAS nas telas 1 e 2) -->
-    <div class="external-sponsor-banner" id="external-sponsor-container">
-        <span>Patrocínio Institucional / Comercial</span>
-        <p>🏢 Anúncio Comercial Genérico ou Apoio Tecnológico 2026</p>
     </div>
 
     <script>
@@ -1524,22 +1506,7 @@
         }
 
         function downloadReportMock() {
-            alert('Relatório oficial exportado com sucesso em formato PDF!');
+            alert('Relatório oficial salvo com sucesso!');
         }
 
         function resetApp() {
-            currentStep = 0;
-            votesData = {};
-            selectedPattern = [];
-            document.querySelectorAll('.pattern-dot').forEach(d => d.classList.remove('active'));
-            document.getElementById('screen-results').classList.add('hidden');
-            document.getElementById('screen-export').classList.add('hidden');
-            document.getElementById('screen-admin-login').classList.add('hidden');
-            document.getElementById('screen-auth').classList.add('hidden');
-            document.getElementById('screen-success').classList.add('hidden');
-            document.getElementById('screen-register').classList.remove('hidden');
-            toggleSponsorVisibility(true);
-        }
-    </script>
-</body>
-</html>
