@@ -18,28 +18,31 @@
             --highlight-yellow: #facc15;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
+        html, body {
+            height: 100vh;
+            width: 100vw;
             margin: 0;
             padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            width: 100vw;
+            overflow: hidden;
             box-sizing: border-box;
         }
 
-        /* Estrutura fluida e dinâmica do smartphone sem espaços ociosos */
+        /* Moldura do celular com ajuste 100% dinâmico e sem scroll interno */
         .phone-frame {
             width: 100%;
             max-width: 410px;
+            height: 100%;
+            max-height: 840px;
             background-color: var(--card-bg);
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             position: relative;
             box-sizing: border-box;
             border-radius: 12px;
@@ -49,13 +52,25 @@
         }
 
         .screen {
-            padding: 10px 14px;
+            flex: 1;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
+            padding: 8px 12px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .screen-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            overflow: hidden;
         }
 
         h1, h2, h3 {
-            margin-top: 0;
+            margin: 0;
         }
 
         .app-brand-header {
@@ -63,12 +78,10 @@
             background: linear-gradient(135deg, rgba(15, 118, 110, 0.25) 0%, rgba(56, 189, 248, 0.15) 100%);
             border: 1px solid #38bdf8;
             border-radius: 6px;
-            padding: 6px;
-            margin-bottom: 6px;
+            padding: 4px;
         }
         .app-brand-header h1 {
-            margin: 0;
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             font-weight: 900;
             color: #38bdf8;
             letter-spacing: 0.5px;
@@ -76,35 +89,32 @@
         }
         .app-brand-header p {
             margin: 0;
-            font-size: 0.5rem;
+            font-size: 0.45rem;
             color: var(--text-muted);
             letter-spacing: 1px;
             text-transform: uppercase;
         }
 
         .header-title {
-            font-size: 0.85rem;
+            font-size: 0.78rem;
             font-weight: bold;
             color: var(--text-main);
-            margin-bottom: 2px;
             text-align: center;
         }
 
         .subtitle {
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             color: var(--text-muted);
             text-align: center;
-            margin-bottom: 6px;
         }
 
         .status-banner {
             background-color: rgba(56, 189, 248, 0.1);
             border: 1px solid #38bdf8;
             border-radius: 4px;
-            padding: 4px 6px;
-            margin-bottom: 6px;
+            padding: 3px 6px;
             text-align: center;
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             color: var(--highlight-yellow);
             font-weight: bold;
         }
@@ -113,43 +123,41 @@
             background-color: rgba(15, 118, 110, 0.15);
             border: 1px solid #0f766e;
             border-radius: 4px;
-            padding: 4px 6px;
-            margin-bottom: 6px;
+            padding: 3px 6px;
             text-align: center;
         }
         .tse-notice-box span {
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             color: #38bdf8;
             font-weight: bold;
             display: block;
-            margin-bottom: 1px;
         }
         .tse-notice-box p {
             margin: 0;
-            font-size: 0.48rem;
+            font-size: 0.44rem;
             color: var(--text-muted);
             line-height: 1.1;
         }
 
         .form-group {
-            margin-bottom: 6px;
+            margin-bottom: 3px;
         }
 
         label {
             display: block;
-            font-size: 0.58rem;
+            font-size: 0.52rem;
             color: var(--text-muted);
-            margin-bottom: 2px;
+            margin-bottom: 1px;
         }
 
         input, select {
             width: 100%;
-            padding: 6px 8px;
+            padding: 4px 6px;
             background-color: #090d16;
             border: 1px solid var(--border);
             border-radius: 4px;
             color: var(--text-main);
-            font-size: 0.72rem;
+            font-size: 0.65rem;
             box-sizing: border-box;
         }
 
@@ -162,16 +170,15 @@
         .checkbox-group {
             display: flex;
             align-items: flex-start;
-            gap: 6px;
-            margin: 6px 0;
-            font-size: 0.58rem;
+            gap: 4px;
+            font-size: 0.52rem;
             color: var(--text-main);
-            line-height: 1.2;
+            line-height: 1.1;
         }
 
         .checkbox-group input {
-            width: 14px;
-            height: 14px;
+            width: 12px;
+            height: 12px;
             margin-top: 1px;
             accent-color: var(--accent);
             cursor: pointer;
@@ -179,29 +186,28 @@
 
         button {
             width: 100%;
-            padding: 8px;
+            padding: 6px;
             background-color: #1e293b;
             color: white;
             border: 1px solid #475569;
             border-radius: 4px;
-            font-size: 0.72rem;
+            font-size: 0.65rem;
             font-weight: bold;
             cursor: pointer;
-            margin-top: 6px;
         }
 
+        /* Distribuição 100% dinâmica dos candidatos sem rolagens */
         #candidates-container {
             display: flex;
             flex-direction: column;
-            gap: 6px;
-            margin-bottom: 6px;
+            gap: 4px;
         }
 
         .candidate-card {
             background-color: #090d16;
             border: 2px solid var(--border);
             border-radius: 6px;
-            padding: 8px 10px;
+            padding: 6px 8px;
             display: flex;
             align-items: center;
             cursor: pointer;
@@ -214,42 +220,40 @@
         }
 
         .candidate-img {
-            width: 36px;
-            height: 36px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 10px;
+            margin-right: 8px;
             border: 1px solid var(--border);
         }
 
         .candidate-info h4 {
-            margin: 0 0 2px 0;
-            font-size: 0.75rem;
+            margin: 0 0 1px 0;
+            font-size: 0.68rem;
         }
 
         .candidate-info p {
             margin: 0;
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             color: var(--text-muted);
         }
 
         .special-votes-wrapper {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 6px;
-            margin-top: 6px;
-            margin-bottom: 6px;
+            gap: 4px;
         }
 
         .special-vote-btn {
             background-color: #1e293b;
             border: 1px dashed var(--border);
             text-align: center;
-            padding: 8px 4px;
+            padding: 6px 2px;
             border-radius: 4px;
             cursor: pointer;
             font-weight: bold;
-            font-size: 0.55rem;
+            font-size: 0.52rem;
             color: var(--text-muted);
         }
         .special-vote-btn.selected {
@@ -258,14 +262,14 @@
             color: #10b981;
         }
 
-        /* Grade do padrão de pontos (Gesture Lock) */
+        /* Padrão de pontos ajustado para encaixar perfeitamente */
         .pattern-lock-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            width: 200px;
-            margin: 15px auto;
-            padding: 15px;
+            gap: 12px;
+            width: 170px;
+            margin: 8px auto;
+            padding: 10px;
             background-color: #090d16;
             border: 1px solid var(--border);
             border-radius: 8px;
@@ -273,8 +277,8 @@
             align-items: center;
         }
         .pattern-dot {
-            width: 32px;
-            height: 32px;
+            width: 26px;
+            height: 26px;
             border-radius: 50%;
             background-color: #334155;
             border: 2px solid var(--border);
@@ -293,46 +297,43 @@
 
         .success-box {
             text-align: center;
-            padding: 16px 8px;
+            padding: 10px 4px;
         }
 
         .success-icon {
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: #10b981;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .badge {
             display: inline-block;
             background-color: rgba(100, 116, 139, 0.2);
             color: #94a3b8;
-            padding: 2px 8px;
+            padding: 2px 6px;
             border-radius: 10px;
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             font-weight: bold;
-            margin-bottom: 6px;
             text-transform: uppercase;
         }
 
         .result-tabs {
             display: flex;
             flex-direction: row;
-            gap: 3px;
-            margin-bottom: 6px;
+            gap: 2px;
             background-color: #090d16;
-            padding: 3px;
+            padding: 2px;
             border-radius: 4px;
             border: 1px solid var(--border);
-            overflow-x: auto;
         }
         .tab-btn {
             flex: 1;
             min-width: 0;
-            padding: 6px 3px;
+            padding: 5px 2px;
             background: transparent;
             border: none;
             color: var(--text-muted);
-            font-size: 0.55rem;
+            font-size: 0.52rem;
             font-weight: bold;
             border-radius: 3px;
             cursor: pointer;
@@ -348,25 +349,24 @@
 
         .filter-box {
             background-color: #090d16;
-            padding: 6px 8px;
+            padding: 5px 6px;
             border-radius: 4px;
             border: 1px solid var(--border);
-            margin-bottom: 6px;
-            font-size: 0.58rem;
+            font-size: 0.55rem;
         }
 
         .sub-filters {
             display: flex;
             flex-wrap: wrap;
-            gap: 4px;
-            margin-top: 4px;
+            gap: 3px;
+            margin-top: 2px;
         }
         .sub-filter-btn {
-            padding: 4px 6px;
+            padding: 3px 5px;
             background: #1e293b;
             border: 1px solid var(--border);
             color: var(--text-muted);
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             border-radius: 3px;
             cursor: pointer;
         }
@@ -377,10 +377,10 @@
         }
 
         .section-divider {
-            margin: 4px 0;
+            margin: 2px 0;
             border-top: 1px dashed var(--border);
-            padding-top: 4px;
-            font-size: 0.52rem;
+            padding-top: 2px;
+            font-size: 0.48rem;
             font-weight: bold;
             color: #38bdf8;
             text-transform: uppercase;
@@ -392,16 +392,15 @@
             background-color: #090d16;
             border: 1px solid var(--border);
             border-radius: 4px;
-            margin-bottom: 6px;
-            padding: 3px;
+            padding: 2px;
         }
         .mode-btn {
             flex: 1;
-            padding: 5px;
+            padding: 4px;
             background: transparent;
             border: none;
             color: var(--text-muted);
-            font-size: 0.55rem;
+            font-size: 0.52rem;
             font-weight: bold;
             cursor: pointer;
             border-radius: 3px;
@@ -412,19 +411,19 @@
         }
 
         .result-bar-container {
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .result-meta {
             display: flex;
             justify-content: space-between;
-            font-size: 0.6rem;
-            margin-bottom: 2px;
+            font-size: 0.55rem;
+            margin-bottom: 1px;
         }
 
         .progress-bar {
             width: 100%;
-            height: 5px;
+            height: 4px;
             background-color: #090d16;
             border-radius: 2px;
             overflow: hidden;
@@ -441,18 +440,17 @@
             background-color: #090d16;
             border: 1px solid var(--border);
             border-radius: 4px;
-            padding: 6px;
-            margin-bottom: 6px;
+            padding: 4px;
             text-align: center;
         }
         .admin-stat-card h3 {
             margin: 0;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             color: #38bdf8;
         }
         .admin-stat-card p {
             margin: 0;
-            font-size: 0.52rem;
+            font-size: 0.48rem;
             color: var(--text-muted);
         }
 
@@ -460,23 +458,22 @@
             background-color: #ffffff;
             color: #0f172a;
             border-radius: 4px;
-            padding: 8px;
-            font-size: 0.6rem;
-            margin-bottom: 6px;
-            max-height: 180px;
+            padding: 6px;
+            font-size: 0.55rem;
+            max-height: 130px;
             overflow-y: auto;
             text-align: left;
         }
         .report-preview-box h3 {
             color: #0f766e;
             text-align: center;
-            margin-bottom: 3px;
-            font-size: 0.7rem;
+            margin-bottom: 2px;
+            font-size: 0.65rem;
         }
         .report-preview-box hr {
             border: 0;
             border-top: 1px solid #cbd5e1;
-            margin: 4px 0;
+            margin: 2px 0;
         }
 
         /* Banner de patrocínio externo visível apenas nas 2 primeiras telas */
@@ -486,22 +483,21 @@
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             border: 1px dashed #475569;
             border-radius: 6px;
-            padding: 8px 12px;
+            padding: 6px 10px;
             text-align: center;
-            margin-top: 8px;
+            margin-top: 4px;
             box-sizing: border-box;
         }
         .external-sponsor-banner span {
-            font-size: 0.48rem;
+            font-size: 0.42rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: var(--text-muted);
             display: block;
-            margin-bottom: 1px;
         }
         .external-sponsor-banner p {
             margin: 0;
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             color: #38bdf8;
             font-weight: bold;
         }
@@ -530,7 +526,7 @@
 
                 <!-- TELA 1: CADASTRO DEMOGRÁFICO DO ELEITOR -->
                 <div id="screen-register" class="view">
-                    <div style="text-align: center; margin-top: 2px;">
+                    <div style="text-align: center;">
                         <h1 class="header-title">Perfil Demográfico</h1>
                         <p class="subtitle">Dados obrigatórios para ponderação estatística oficial (IBGE / TSE).</p>
                     </div>
@@ -540,7 +536,7 @@
                         <input type="text" id="whatsapp-input" placeholder="(11) 99999-9999">
                     </div>
 
-                    <div style="display: flex; gap: 6px;">
+                    <div style="display: flex; gap: 4px;">
                         <div class="form-group" style="flex: 1;">
                             <label>Estado / Países</label>
                             <select id="state-input" onchange="updateCitySuggestions()">
@@ -583,7 +579,7 @@
                         </div>
                     </div>
 
-                    <div style="display: flex; gap: 6px;">
+                    <div style="display: flex; gap: 4px;">
                         <div class="form-group" style="flex: 1;">
                             <label>Zona / Região</label>
                             <select id="zone-input">
@@ -613,7 +609,7 @@
                         </div>
                     </div>
 
-                    <div style="display: flex; gap: 6px;">
+                    <div style="display: flex; gap: 4px;">
                         <div class="form-group" style="flex: 1;">
                             <label>Gênero</label>
                             <select id="gender-input">
@@ -639,23 +635,23 @@
 
                     <div class="checkbox-group">
                         <input type="checkbox" id="lgpd-check">
-                        <label for="lgpd-check" style="color: var(--text-main); font-size: 0.58rem; cursor: pointer;">Autorizo o uso destes dados para fins estatísticos e anonimização conforme LGPD e TSE.</label>
+                        <label for="lgpd-check" style="color: var(--text-main); font-size: 0.5rem; cursor: pointer;">Autorizo o uso destes dados para fins estatísticos e anonimização conforme LGPD e TSE.</label>
                     </div>
 
                     <button onclick="goToAuth()">Prosseguir para Autenticação</button>
                     
-                    <button onclick="openAdminLogin()" style="background-color: #090d16; border: 1px dashed var(--border); color: var(--text-muted); font-size: 0.58rem; margin-top: 6px;">🔒 Acesso Restrito (Gestor / ADM)</button>
+                    <button onclick="openAdminLogin()" style="background-color: #090d16; border: 1px dashed var(--border); color: var(--text-muted); font-size: 0.52rem;">🔒 Acesso Restrito (Gestor / ADM)</button>
                 </div>
 
                 <!-- TELA 1.1: LOGIN DO ADMINISTRADOR -->
                 <div id="screen-admin-login" class="view hidden">
-                    <div style="text-align: center; margin-top: 10px;">
+                    <div style="text-align: center;">
                         <span class="badge" style="background-color: rgba(56, 189, 248, 0.2); color: #38bdf8;">Painel de Controle</span>
                         <h1 class="header-title">Autenticação do Gestor</h1>
                         <p class="subtitle">Insira a chave mestra do sistema para acessar a retaguarda analítica.</p>
                     </div>
 
-                    <div class="form-group" style="margin-top: 8px;">
+                    <div class="form-group">
                         <label>Configurar Turno Ativo do Sistema</label>
                         <select id="admin-turn-toggle" onchange="toggleSystemTurn()">
                             <option value="1">1º Turno (Fase Inicial)</option>
@@ -663,17 +659,17 @@
                         </select>
                     </div>
 
-                    <div class="form-group" style="margin-top: 8px;">
+                    <div class="form-group">
                         <label>Chave de Acesso ADM</label>
                         <input type="password" id="admin-pass-input" placeholder="Digite a senha (ex: adm2026)">
                     </div>
                     <button onclick="validateAdminLogin()" style="background-color: var(--accent); border-color: #14b8a6;">Entrar no Painel Macro</button>
-                    <button onclick="backToRegister()" style="background-color: #334155; margin-top: 6px;">Voltar ao Início</button>
+                    <button onclick="backToRegister()" style="background-color: #334155;">Voltar ao Início</button>
                 </div>
 
                 <!-- TELA 2: AUTENTICAÇÃO POR PADRÃO DE PONTOS / BIOMETRIA -->
                 <div id="screen-auth" class="view hidden">
-                    <div style="text-align: center; margin-top: 10px;">
+                    <div style="text-align: center;">
                         <span class="badge">Segurança & Acesso</span>
                         <h1 class="header-title">Validação por Padrão de Pontos</h1>
                         <p class="subtitle">Desenhe seu padrão de segurança ou use a biometria para confirmar acesso.</p>
@@ -691,17 +687,17 @@
                         <div class="pattern-dot" data-id="9" onclick="toggleDot(this)"></div>
                     </div>
 
-                    <p style="text-align: center; font-size: 0.55rem; color: var(--text-muted); margin: 4px 0;">Toque em pelo menos 3 pontos para criar seu padrão ou clique em biometria.</p>
+                    <p style="text-align: center; font-size: 0.5rem; color: var(--text-muted); margin: 0;">Toque em pelo menos 3 pontos para criar seu padrão ou clique em biometria.</p>
 
                     <button onclick="startVoting()" style="background-color: #0f766e; border-color: #14b8a6;">Confirmar Padrão e Acessar Urna</button>
-                    <button onclick="simulateBiometric()" style="background-color: #334155; margin-top: 6px;">👆 Usar Biometria Facial / Digital</button>
+                    <button onclick="simulateBiometric()" style="background-color: #334155;">👆 Usar Biometria Facial / Digital</button>
                 </div>
 
                 <!-- TELA 3: CÉDULA DE VOTAÇÃO -->
                 <div id="screen-voting" class="view hidden">
-                    <div style="text-align: center; margin-bottom: 6px;">
+                    <div style="text-align: center;">
                         <span class="badge" id="voting-badge">Etapa 1 de X</span>
-                        <h2 id="voting-title" style="font-size: 0.85rem; margin-bottom: 2px;">Cargo</h2>
+                        <h2 id="voting-title" style="font-size: 0.8rem;">Cargo</h2>
                         <p class="subtitle" id="voting-subtitle">Selecione 1 opção</p>
                     </div>
 
@@ -713,28 +709,28 @@
                         <div class="special-vote-btn" onclick="handleSpecialVote('Indecisos / Não Sabe')">Indeciso</div>
                     </div>
 
-                    <button id="btn-next-vote" onclick="nextVotingStep()" style="background-color: #0f766e; border-color: #14b8a6; margin-top: 6px;" disabled>Confirmar e Avançar</button>
+                    <button id="btn-next-vote" onclick="nextVotingStep()" style="background-color: #0f766e; border-color: #14b8a6;" disabled>Confirmar e Avançar</button>
                 </div>
 
                 <!-- TELA 4: SUCESSO E BLOQUEIO -->
                 <div id="screen-success" class="view hidden success-box">
                     <div class="success-icon">🛡️</div>
-                    <h2 style="color: #10b981; font-size: 0.88rem;">Voto Computado e Anonimizado</h2>
+                    <h2 style="color: #10b981; font-size: 0.82rem;">Voto Computado e Anonimizado</h2>
                     <p class="subtitle">Seu voto foi segregado em urna cega. O histórico foi apagado deste dispositivo.</p>
-                    <div style="background-color: #090d16; padding: 8px; border-radius: 4px; margin: 6px 0; border: 1px solid var(--border);">
-                        <p style="font-size: 0.58rem; margin: 0; color: var(--text-muted);">Status: <strong style="color: var(--text-main);">Acesso encerrado para esta consulta.</strong></p>
+                    <div style="background-color: #090d16; padding: 6px; border-radius: 4px; border: 1px solid var(--border);">
+                        <p style="font-size: 0.52rem; margin: 0; color: var(--text-muted);">Status: <strong style="color: var(--text-main);">Acesso encerrado para esta consulta.</strong></p>
                     </div>
                     <button onclick="goToResults()">Consultar Resultados e Ficha TSE</button>
                 </div>
 
                 <!-- TELA 5: RESULTADOS / PAINEL ANALÍTICO ADM -->
                 <div id="screen-results" class="view hidden">
-                    <div style="display: flex; gap: 6px; margin-bottom: 6px;">
-                        <div class="admin-stat-card" style="flex: 1; margin-bottom: 0;">
+                    <div style="display: flex; gap: 4px;">
+                        <div class="admin-stat-card" style="flex: 1;">
                             <h3 id="stat-total-votes">4.500</h3>
                             <p>Amostra Consolidada</p>
                         </div>
-                        <div class="admin-stat-card" style="flex: 1; margin-bottom: 0;">
+                        <div class="admin-stat-card" style="flex: 1;">
                             <h3 style="color: #10b981;">99.8%</h3>
                             <p>Integridade Blindada</p>
                         </div>
@@ -744,13 +740,13 @@
 
                     <!-- FILTROS GEOGRÁFICOS DINÂMICOS -->
                     <div class="filter-box">
-                        <div style="display: flex; gap: 6px; margin-bottom: 4px;">
-                            <label style="flex: 1; font-size: 0.58rem; color: var(--text-muted); font-weight: bold;">Estado / Países:</label>
-                            <label id="filter-second-label" style="flex: 1; font-size: 0.58rem; color: var(--text-muted); font-weight: bold;">Município / Países:</label>
+                        <div style="display: flex; gap: 4px; margin-bottom: 2px;">
+                            <label style="flex: 1; font-size: 0.52rem; color: var(--text-muted); font-weight: bold;">Estado / Países:</label>
+                            <label id="filter-second-label" style="flex: 1; font-size: 0.52rem; color: var(--text-muted); font-weight: bold;">Município / Países:</label>
                         </div>
 
-                        <div style="display: flex; gap: 6px; margin-bottom: 6px;" id="geographic-selectors-wrapper">
-                            <select id="filter-state-select" onchange="onStateFilterChange()" style="flex: 1; font-size: 0.58rem; padding: 4px;">
+                        <div style="display: flex; gap: 4px; margin-bottom: 3px;" id="geographic-selectors-wrapper">
+                            <select id="filter-state-select" onchange="onStateFilterChange()" style="flex: 1; font-size: 0.52rem; padding: 3px;">
                                 <option value="AM">Amazonas - AM</option>
                                 <option value="AC">Acre - AC</option>
                                 <option value="AL">Alagoas - AL</option>
@@ -781,13 +777,13 @@
                                 <option value="ZZ">🌎 Outros Países (Exterior)</option>
                             </select>
                             
-                            <select id="filter-city-select" onchange="onCityFilterChange()" style="flex: 1; font-size: 0.58rem; padding: 4px;">
+                            <select id="filter-city-select" onchange="onCityFilterChange()" style="flex: 1; font-size: 0.52rem; padding: 3px;">
                                 <option value="Todas as Cidades">🏙️ Todas as Cidades</option>
                             </select>
                         </div>
 
-                        <label id="macro-label" style="margin-bottom: 3px; color: var(--text-main); font-weight: bold; font-size: 0.58rem;">Recorte Geográfico:</label>
-                        <div id="macro-filters-container" class="sub-filters" style="margin-bottom: 4px;"></div>
+                        <label id="macro-label" style="margin-bottom: 2px; color: var(--text-main); font-weight: bold; font-size: 0.52rem;">Recorte Geográfico:</label>
+                        <div id="macro-filters-container" class="sub-filters" style="margin-bottom: 2px;"></div>
                         <div id="section-divider-elem" class="section-divider">📍 Zonas da Cidade Selecionada</div>
                         <div id="micro-filters-container" class="sub-filters"></div>
                     </div>
@@ -799,30 +795,29 @@
 
                     <div id="results-content-container"></div>
 
-                    <button onclick="openExportReport()" style="background-color: #0f766e; border-color: #14b8a6; margin-top: 6px; font-size: 0.62rem;">📄 Gerar Relatório Oficial (Imprensa / PDF)</button>
+                    <button onclick="openExportReport()" style="background-color: #0f766e; border-color: #14b8a6; font-size: 0.58rem;">📄 Gerar Relatório Oficial (Imprensa / PDF)</button>
 
-                    <div style="background-color: #090d16; padding: 6px; border-radius: 4px; margin-top: 6px; border: 1px solid var(--border); font-size: 0.58rem; color: var(--text-muted); line-height: 1.2;">
-                        <strong style="color: var(--text-main); display: block; margin-bottom: 2px;">Compliance (TSE):</strong>
-                        • Protocolo PesqEle: BR-02849/2026 | Amostra: 4.500 Ponderados<br>
-                        • Margem de Erro: ± 1.5% (Confiança 95%) | CONRE-3
+                    <div style="background-color: #090d16; padding: 4px; border-radius: 4px; border: 1px solid var(--border); font-size: 0.52rem; color: var(--text-muted); line-height: 1.1;">
+                        <strong style="color: var(--text-main); display: block; margin-bottom: 1px;">Compliance (TSE):</strong>
+                        • Protocolo PesqEle: BR-02849/2026 | Amostra: 4.500 Ponderados | Margem: ± 1.5%
                     </div>
 
-                    <button onclick="resetApp()" style="margin-top: 6px; padding: 6px; background-color: #334155; font-size: 0.58rem;">Sair / Reiniciar Teste</button>
+                    <button onclick="resetApp()" style="padding: 4px; background-color: #334155; font-size: 0.52rem;">Sair / Reiniciar Teste</button>
                 </div>
 
                 <!-- TELA 6: EXPORTAÇÃO DE RELATÓRIO -->
                 <div id="screen-export" class="view hidden">
-                    <div style="text-align: center; margin-bottom: 6px;">
+                    <div style="text-align: center;">
                         <span class="badge" style="background-color: rgba(16, 185, 129, 0.2); color: #10b981;">Documento Executivo</span>
-                        <h2 style="font-size: 0.85rem; margin-bottom: 2px;">Relatório Oficial para Imprensa</h2>
+                        <h2 style="font-size: 0.8rem; margin-bottom: 1px;">Relatório Oficial para Imprensa</h2>
                         <p class="subtitle">Pronto para distribuição institucional, jurídica e partidária.</p>
                     </div>
 
                     <div class="report-preview-box" id="report-content-box"></div>
 
-                    <button onclick="copyReportText()" style="background-color: #2563eb; border-color: #3b82f6; font-size: 0.62rem;">📋 Copiar Relatório Completo</button>
-                    <button onclick="downloadReportMock()" style="background-color: #0f766e; border-color: #14b8a6; font-size: 0.62rem; margin-top: 6px;">💾 Descarregar / Salvar (PDF)</button>
-                    <button onclick="backToResults()" style="background-color: #334155; margin-top: 6px; font-size: 0.62rem;">Voltar ao Painel Analítico</button>
+                    <button onclick="copyReportText()" style="background-color: #2563eb; border-color: #3b82f6; font-size: 0.58rem;">📋 Copiar Relatório Completo</button>
+                    <button onclick="downloadReportMock()" style="background-color: #0f766e; border-color: #14b8a6; font-size: 0.58rem;">💾 Descarregar / Salvar (PDF)</button>
+                    <button onclick="backToResults()" style="background-color: #334155; font-size: 0.58rem;">Voltar ao Painel Analítico</button>
                 </div>
             </div>
 
@@ -1492,7 +1487,6 @@
             const stateVal = document.getElementById('filter-state-select').value;
             const cityVal = document.getElementById('filter-city-select').value;
 
-            // Tradução e adaptação completa para o Português do Brasil no relatório
             let cargoNomePt = "Presidente";
             if(lastLoadedCategory === 'governor' || lastLoadedCategory === 'governor_2t') cargoNomePt = "Governador";
             if(lastLoadedCategory === 'senator') cargoNomePt = "Senador";
