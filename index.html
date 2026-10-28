@@ -1510,3 +1510,18 @@
         }
 
         function resetApp() {
+            currentStep = 0;
+            votesData = {};
+            selectedPattern = [];
+            document.querySelectorAll('.pattern-dot').forEach(d => d.classList.remove('active'));
+            document.getElementById('screen-results').classList.add('hidden');
+            document.getElementById('screen-export').classList.add('hidden');
+            document.getElementById('screen-admin-login').classList.add('hidden');
+            document.getElementById('screen-auth').classList.add('hidden');
+            document.getElementById('screen-success').classList.add('hidden');
+            document.getElementById('screen-register').classList.remove('hidden');
+            toggleSponsorVisibility(true);
+        }
+    </script>
+</body>
+</html>
